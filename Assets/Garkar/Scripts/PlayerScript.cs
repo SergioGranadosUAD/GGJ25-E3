@@ -76,7 +76,7 @@ public class PlayerScript : MonoBehaviour
       }
       else
       {
-        Rigidbody.AddForceX(value.Get<Vector2>().x * m_speed);
+        Rigidbody.AddForceX(value.Get<Vector2>().x * m_speed * 5);
       }
     }
   }

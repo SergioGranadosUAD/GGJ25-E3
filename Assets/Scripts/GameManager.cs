@@ -110,10 +110,7 @@ public class GameManager : MonoBehaviour
         GameObject playerGameObject = playerInput.gameObject;
         setNewPlayer(playerGameObject);
 
-        Transform spawnPoint = m_spawnPoint[m_currentSpawnIndex];
-        playerGameObject.transform.position = spawnPoint.position;
-
-        m_currentSpawnIndex++;
+        setPositionPalyer(playerGameObject);
     }
 
     private void OnPlayerLeft(PlayerInput playerInput)
@@ -128,6 +125,20 @@ public class GameManager : MonoBehaviour
         foreach (Transform child in obj.transform)
         {
             m_spawnPoint.Add(child.gameObject.transform);
+        }
+        m_gameTime = 180.0f;
+    }
+
+    void setPositionPalyer(GameObject playerGameObject)
+    {
+        Transform spawnPoint = m_spawnPoint[m_currentSpawnIndex];
+        playerGameObject.transform.position = spawnPoint.position;
+
+        m_currentSpawnIndex++;
+
+        if (m_currentSpawnIndex > 3)
+        {
+            m_currentSpawnIndex = 0;
         }
     }
 
