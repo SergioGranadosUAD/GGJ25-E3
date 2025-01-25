@@ -1,5 +1,8 @@
+using System;
+using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Xml.Schema;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,7 +11,7 @@ public class PlayerScript : MonoBehaviour
 {
   //Components
   private PlayerInput m_playerInput;
-    public PlayerInput PlayerInput
+  public PlayerInput PlayerInput
   {
     get {
       if (m_playerInput == null)
@@ -16,8 +19,7 @@ public class PlayerScript : MonoBehaviour
         m_playerInput = GetComponent<PlayerInput>();
       }
       return m_playerInput;
-      }
-    set { m_playerInput = value; }
+    }
   }
 
   private Rigidbody2D m_rigidbody2D;
@@ -25,20 +27,31 @@ public class PlayerScript : MonoBehaviour
   {
     get
     {
-      if(m_rigidbody2D == null)
+      if (m_rigidbody2D == null)
       {
         m_rigidbody2D = GetComponent<Rigidbody2D>();
       }
       return m_rigidbody2D;
     }
-    set
+  }
+
+  private BoxCollider2D m_boxCollider;
+  public BoxCollider2D BoxCollider
+  {
+    get
     {
-      m_rigidbody2D = value;
+      if (m_boxCollider == null)
+      {
+        m_boxCollider = GetComponent<BoxCollider2D>();
+      }
+      return m_boxCollider;
     }
   }
 
   [SerializeField]
   private float m_speed = 5.0f;
+  [SerializeField]
+  private float m_trappedSpeed = 1.0f;
   [SerializeField]
   private float m_jumpHeight = 10.0f;
   [SerializeField]
@@ -46,44 +59,73 @@ public class PlayerScript : MonoBehaviour
   [SerializeField]
   private float m_airSpeedMultiplier = 5.0f;
   [SerializeField]
+  private float m_maxResistance = 100.0f;
+  [SerializeField]
+  private float m_shotCooldown = 1.0f;
+  [SerializeField]
+  private float m_trappedTime = 5.0f;
+  [SerializeField]
+  private float m_trappedGravityScale = 0.01f;
+  [SerializeField]
+  private float m_resistanceRegenTime = 5.0f;
+  [SerializeField]
+  private float m_trappedIFrameTime = 2.0f;
+  [SerializeField]
+  private float m_timeToStartRegenWhenShot = 1.0f;
+  
+  [SerializeField]
   private GameObject m_projectileGO;
 
+  private float m_currentRegenTime = 0.0f;
+  private float m_currentResistance = 0.0f;
   private Vector2 m_movementDir = Vector2.zero;
   private Vector2 m_aimDir = Vector2.zero;
   private bool m_hasDoubleJumped = false;
   private bool m_isGrounded = false;
   private bool m_isTrapped = false;
+  private bool m_canShoot = true;
+  private bool m_canBeTrapped = true;
   private GameObject m_armGO;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
   {
     m_armGO = transform.GetChild(0).gameObject;
-    m_armGO.transform.position = transform.right * m_armDistance;
+    m_armGO.transform.position = transform.position + transform.right * m_armDistance;
+    m_currentResistance = m_maxResistance;
   }
 
   // Update is called once per frame
   void Update()
   {
-    
-    
+    checkIfCanRegen();
+    checkGrounded();
   }
 
   private void OnMovement(InputValue value)
   {
-    if(!m_isTrapped)
+    Vector2 inputDir = value.Get<Vector2>();
+    if (!m_isTrapped)
     {
       if(m_isGrounded)
       {
-        Rigidbody.linearVelocityX = value.Get<Vector2>().x * m_speed;
+        Rigidbody.linearVelocityX = inputDir.x * m_speed;
         
       }
       else
       {
-        Rigidbody.AddForceX(value.Get<Vector2>().x * m_speed * m_airSpeedMultiplier);
+        Rigidbody.AddForceX(inputDir.x * m_speed * m_airSpeedMultiplier);
       }
       //Clamp to max speed in X axis.
       Rigidbody.linearVelocityX = Mathf.Clamp(Rigidbody.linearVelocityX, -m_speed, m_speed);
+    }
+    else
+    {
+      Rigidbody.AddForce(inputDir * m_trappedSpeed);
+      if(Rigidbody.linearVelocity.magnitude > m_trappedSpeed)
+      {
+        Rigidbody.linearVelocity = Rigidbody.linearVelocity.normalized * m_trappedSpeed;
+      }
     }
   }
 
@@ -101,7 +143,6 @@ public class PlayerScript : MonoBehaviour
     if(m_isGrounded)
     {
       Rigidbody.AddForceY(m_jumpHeight);
-      m_isGrounded = false;
     }
     else if(!m_hasDoubleJumped)
     {
@@ -113,12 +154,19 @@ public class PlayerScript : MonoBehaviour
 
   private void OnShoot(InputValue value)
   {
+    if(m_isTrapped || !m_canShoot)
+    {
+      return;
+    }
+
     GameObject projectile = Instantiate(m_projectileGO, m_armGO.transform.position, Quaternion.identity) as GameObject;
     if (projectile != null)
     {
       BulletBase bulletComp = projectile.GetComponent<BulletBase>();
       bulletComp.Direction = m_aimDir;
       bulletComp.OwningPlayerID = PlayerInput.playerIndex;
+
+      StartCoroutine(startShotCooldownTimer());
     }
   }
 
@@ -127,10 +175,145 @@ public class PlayerScript : MonoBehaviour
 
   }
 
+  public void damagePlayer(Vector2 dir, float damageAmount, float pushForce)
+  {
+    if(!m_isTrapped && m_canBeTrapped)
+    {
+      m_currentResistance -= damageAmount;
+      if (m_currentResistance <= 0)
+      {
+        trapPlayer();
+      }
+    }
+    Rigidbody.linearVelocity = dir * pushForce;
+    m_currentRegenTime = 0.0f;
+  }
+
+  private void trapPlayer()
+  {
+    StartCoroutine(startTrappedTimer());
+  }
+
+  private void respawnPlayer()
+  {
+
+  }
+
+  private void checkIfCanRegen()
+  {
+    if (m_currentResistance < m_maxResistance && !m_isTrapped)
+    {
+      m_currentRegenTime += Time.deltaTime;
+      if (m_currentRegenTime > m_timeToStartRegenWhenShot)
+      {
+        float step = m_maxResistance / m_resistanceRegenTime;
+        m_currentResistance += step * Time.deltaTime;
+        m_currentResistance = Mathf.Clamp(m_currentResistance, 0, m_maxResistance);
+      }
+    }
+  }
+  private void checkGrounded()
+  {
+    if(m_isTrapped)
+    {
+      return;
+    }
+
+    LayerMask layerMask = LayerMask.GetMask("Walls");
+
+    Vector2[] points = new Vector2[3] { new Vector2(BoxCollider.bounds.min.x, BoxCollider.bounds.min.y),
+                                        new Vector2(BoxCollider.bounds.max.x, BoxCollider.bounds.min.y),
+                                        new Vector2(BoxCollider.bounds.center.x, BoxCollider.bounds.min.y)
+                                        };
+
+    //
+    for(int i = 0; i < points.Length; ++i)
+    {
+      if (Physics2D.Raycast(points[i], Vector3.down, .1f, layerMask)) {
+        Debug.DrawRay(points[i], Vector3.down * .1f, Color.green);
+        m_isGrounded = true;
+        m_hasDoubleJumped = false;
+        return;
+      }
+      else
+      {
+        Debug.DrawRay(points[i], Vector3.down * .1f, Color.red);
+      }
+    }
+
+    float maxWalljumpHeight = BoxCollider.bounds.max.y - BoxCollider.size.y * .75f;
+    Vector2 leftWalljumpPoint = new Vector2(BoxCollider.bounds.min.x, maxWalljumpHeight);
+    if (Physics2D.Raycast(leftWalljumpPoint, Vector3.left, .1f, layerMask))
+    {
+      Debug.DrawRay(leftWalljumpPoint, Vector3.left * .1f, Color.green);
+      m_isGrounded = true;
+      m_hasDoubleJumped = false;
+      return;
+    }
+    else
+    {
+      Debug.DrawRay(leftWalljumpPoint, Vector3.left * .1f, Color.red);
+    }
+
+    Vector2 rightWalljumpPoint = new Vector2(BoxCollider.bounds.max.x, maxWalljumpHeight);
+    if (Physics2D.Raycast(rightWalljumpPoint, Vector3.right, .1f, layerMask))
+    {
+      Debug.DrawRay(rightWalljumpPoint, Vector3.right * .1f, Color.green);
+      m_isGrounded = true;
+      m_hasDoubleJumped = false;
+      return;
+    }
+    else
+    {
+      Debug.DrawRay(rightWalljumpPoint, Vector3.right * .1f, Color.red);
+    }
+
+    //No ground found
+    m_isGrounded = false;
+  }
+
   private void OnCollisionEnter2D(Collision2D collision)
   {
-    m_isGrounded = true;
-    m_hasDoubleJumped = false;
-    Rigidbody.linearVelocityX = 0;
+    if(collision.transform.CompareTag("Walls"))
+    {
+      Rigidbody.linearVelocityX = 0;
+    }
   }
+
+  private IEnumerator startShotCooldownTimer()
+  {
+    m_canShoot = false;
+    float currentTime = 0;
+    while(currentTime < m_shotCooldown)
+    {
+      currentTime += Time.deltaTime;
+      yield return null;
+    }
+    m_canShoot = true;
+  }
+
+  private IEnumerator startTrappedTimer()
+  {
+    Rigidbody.gravityScale = m_trappedGravityScale;
+    m_isTrapped = true;
+    float currentTime = 0;
+    while (currentTime < m_trappedTime)
+    {
+      currentTime += Time.deltaTime;
+      yield return null;
+    }
+    Rigidbody.gravityScale = 1.0f;
+    m_isTrapped = false;
+    m_currentResistance = m_maxResistance;
+
+    m_canBeTrapped = false;
+    currentTime = 0;
+    while(currentTime < m_trappedIFrameTime)
+    {
+      currentTime += Time.deltaTime;
+      yield return null;
+    }
+    m_canBeTrapped = true;
+  }
+  
 }
