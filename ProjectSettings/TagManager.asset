@@ -5,12 +5,13 @@ TagManager:
   serializedVersion: 3
   tags:
   - SpawnPoint
+  - Walls
   - Time
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Walls
   - Water
   - UI
   - 
