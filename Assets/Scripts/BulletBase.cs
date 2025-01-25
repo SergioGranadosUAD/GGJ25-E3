@@ -12,10 +12,33 @@ public class BulletBase : MonoBehaviour
     [SerializeField]
     float m_resistance = 0.995f;
 
-    public float m_stopBackwardThreshold = 0.1f;
-    private Vector2 m_direction;
+  private int m_owningPlayerID;
+  public int OwningPlayerID
+  {
+    get
+    {
+      return m_owningPlayerID;
+    }
+    set
+    {
+      m_owningPlayerID = value;
+    }
+  }
 
-    private float m_actualTime;
+    private Vector2 m_direction;
+  public Vector2 Direction
+  {
+    get
+    {
+      return m_direction;
+    }
+    set
+    {
+      m_direction = value;
+    }
+  }
+
+    private float m_currentTime;
 
     private Rigidbody2D m_rigidBody;
 
@@ -51,9 +74,9 @@ public class BulletBase : MonoBehaviour
 
   private void checkProjectileLifetime()
   {
-    m_actualTime += Time.deltaTime;
+    m_currentTime += Time.deltaTime;
 
-    if (m_actualTime >= m_projectileLifetime)
+    if (m_currentTime >= m_projectileLifetime)
     {
       onProjectileHit();
     }

@@ -21,7 +21,9 @@ public class GameManager : MonoBehaviour
     private int m_currentSpawnIndex = 0;
 
     [SerializeField]
-    public float m_gameTime = 180.0f;
+    private float m_timeLimit = 180.0f;
+
+  private float m_currentTime = 0.0f;
 
     [SerializeField]
     public TMP_Text m_textMeshPro;
@@ -64,28 +66,28 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        gameTime();
-        gameOver();
+        updateGameTime();
+        checkGameOver();
     }
 
-    private void gameTime()
+    private void updateGameTime()
     {
         if (m_textMeshPro == null) { return; }
         if (m_timeActive != true) { return; }
 
-        m_gameTime -= Time.deltaTime;
-        int time = (int)m_gameTime;
+        m_currentTime -= Time.deltaTime;
+        int time = (int)m_currentTime;
         m_textMeshPro.text = time.ToString();
     }
 
-    public void gameOver()
+    public void checkGameOver()
     {
-        if (m_gameTime < 0.0f && m_timeActive != false)
+        if (m_currentTime < 0.0f && m_timeActive != false)
         {
             m_timeActive = false;
         }
     }
-    public void setNewPlayer(GameObject player)
+    public void addNewPlayer(GameObject player)
     {
         for (int i = 0; i <  m_playerList.Count; i++) 
         {
@@ -107,9 +109,9 @@ public class GameManager : MonoBehaviour
     private void OnPlayerJoined(PlayerInput playerInput)
     {
         GameObject playerGameObject = playerInput.gameObject;
-        setNewPlayer(playerGameObject);
+        addNewPlayer(playerGameObject);
 
-        setPositionPalyer(playerGameObject);
+        setPlayerPosition(playerGameObject);
     }
 
     private void OnPlayerLeft(PlayerInput playerInput)
@@ -127,10 +129,9 @@ public class GameManager : MonoBehaviour
         {
             m_spawnPoint.Add(child.gameObject.transform);
         }
-        m_gameTime = 180.0f;
     }
 
-    public void setPositionPalyer(GameObject playerGameObject)
+    void setPlayerPosition(GameObject playerGameObject)
     {
         Transform spawnPoint = m_spawnPoint[m_currentSpawnIndex];
         playerGameObject.transform.position = spawnPoint.position;
