@@ -12,6 +12,8 @@ public class ManagerSelection : MonoBehaviour
     void Start()
     {
         GameManager.Instance.playerInputManager.enabled = true;
+        GameManager.Instance.playerInputManager.EnableJoining();
+    
     }
 
     // Update is called once per frame
