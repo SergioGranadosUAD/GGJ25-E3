@@ -70,10 +70,9 @@ public class GameManager : MonoBehaviour
 
     private void gameTime()
     {
-        if (m_timeActive != true)
-        {
-            return;
-        }
+        if (m_textMeshPro == null) { return; }
+        if (m_timeActive != true) { return; }
+
         m_gameTime -= Time.deltaTime;
         int time = (int)m_gameTime;
         m_textMeshPro.text = time.ToString();
@@ -121,6 +120,8 @@ public class GameManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         GameObject obj = GameObject.FindWithTag("SpawnPoint");
+
+        if (obj == null) { return; }
 
         foreach (Transform child in obj.transform)
         {

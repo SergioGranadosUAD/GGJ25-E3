@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: "Assets/Aram\xEDs/Main Menu.unity"
+    guid: 17430e23a8db860458ca50aa8a77ce00
+  - enabled: 1
+    path: Assets/Yahir/YahirTest.unity
+    guid: 0e0e4a23844490040ad3283abbbba1cc
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 802e885aa66b68c45b2209329e5481df, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
