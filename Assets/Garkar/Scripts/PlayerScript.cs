@@ -80,7 +80,7 @@ public class PlayerScript : MonoBehaviour
       }
       else
       {
-        Rigidbody.AddForceX(value.Get<Vector2>().x * m_speed * 5);
+        Rigidbody.AddForceX(value.Get<Vector2>().x * m_speed * m_airSpeedMultiplier);
       }
       //Clamp to max speed in X axis.
       Rigidbody.linearVelocityX = Mathf.Clamp(Rigidbody.linearVelocityX, -m_speed, m_speed);
@@ -117,8 +117,8 @@ public class PlayerScript : MonoBehaviour
     if (projectile != null)
     {
       BulletBase bulletComp = projectile.GetComponent<BulletBase>();
-      bulletComp.setProjectileDirection(m_aimDir);
-      //Register to projectile manager
+      bulletComp.Direction = m_aimDir;
+      bulletComp.OwningPlayerID = PlayerInput.playerIndex;
     }
   }
 
