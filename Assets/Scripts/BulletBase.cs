@@ -3,76 +3,80 @@ using UnityEngine;
 public class BulletBase : MonoBehaviour
 {
     [SerializeField]
-    private float m_MaxSpeed;
+    private float m_maxSpeed;
     [SerializeField]
-    private float m_ForceAmount = 10.0f;
+    private float m_forceAmount = 10.0f;
     [SerializeField]
-    private float m_timeLife = 100.0f;
+    private float m_projectileLifetime = 100.0f;
 
     [SerializeField]
     float m_resistance = 0.995f;
 
-    public float stopBackwardThreshold = 0.1f;
-    private Vector2 m_directon;
+    public float m_stopBackwardThreshold = 0.1f;
+    private Vector2 m_direction;
 
-    float m_timeActual;
+    private float m_actualTime;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D m_rigidBody;
 
-    private Vector2 force;
+    private Vector2 m_force;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        rb.linearDamping = 1f;
+        m_rigidBody = GetComponent<Rigidbody2D>();
+        m_rigidBody.linearDamping = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        force = new Vector2(m_directon.x, m_directon.y) * m_ForceAmount;
-        rb.AddForce(force);
+        m_force = m_direction * m_forceAmount;
+        m_rigidBody.AddForce(m_force);
 
-        if (rb.linearVelocity.magnitude > m_MaxSpeed)
+        if (m_rigidBody.linearVelocity.magnitude > m_maxSpeed)
         {
-            rb.linearVelocity = rb.linearVelocity.normalized * m_MaxSpeed;
+            m_rigidBody.linearVelocity = m_rigidBody.linearVelocity.normalized * m_maxSpeed;
         }
 
-        m_ForceAmount *= m_resistance;
-        timeLife();
+        m_forceAmount *= m_resistance;
+        checkProjectileLifetime();
     }
 
     public void OnDestroy()
     {
-        if (rb != null) { }
+        if (m_rigidBody != null) { }
 
 
     }
 
-    private void timeLife()
+  private void checkProjectileLifetime()
+  {
+    m_actualTime += Time.deltaTime;
+
+    if (m_actualTime >= m_projectileLifetime)
     {
-        m_timeActual += Time.deltaTime;
-
-        if (m_timeActual >= m_timeLife)
-        {
-            Destroy(gameObject);
-        }
+      onProjectileHit();
     }
+  }
 
-    public void setDirectionShoot(Vector2 directoin)
+  public void setProjectileDirection(Vector2 dir)
+  {
+    m_direction = dir;
+  }
+
+  private void onProjectileHit()
+  {
+    Destroy(gameObject);
+  }
+
+  void OnTriggerEnter2D(Collider2D collision)
+  {
+    GameObject gameObjectTrigger = collision.gameObject;
+    if (gameObject == null)
     {
-        m_directon = directoin;
+        return;
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        GameObject gameObjectTrigger = collision.gameObject;
-        if (gameObject == null)
-        {
-            return;
-        }
-
-        Destroy(gameObject);
-    }
+  onProjectileHit();
+  }
 }
-

@@ -20,7 +20,7 @@ public class TestBullet : MonoBehaviour
             BulletBase bulletBase = newObject.GetComponent<BulletBase>();
 
             Vector2 direction = new Vector2(-1.0f, 1.0f); 
-            bulletBase.setDirectionShoot(direction);
+            bulletBase.setProjectileDirection(direction);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -29,7 +29,7 @@ public class TestBullet : MonoBehaviour
             BulletBase bulletBase = newObject.GetComponent<BulletBase>();
 
             Vector2 direction = new Vector2(-1.0f, 0.0f);
-            bulletBase.setDirectionShoot(direction);
+            bulletBase.setProjectileDirection(direction);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -38,7 +38,7 @@ public class TestBullet : MonoBehaviour
             BulletBase bulletBase = newObject.GetComponent<BulletBase>();
 
             Vector2 direction = new Vector2(1.0f, 0.0f);
-            bulletBase.setDirectionShoot(direction);
+            bulletBase.setProjectileDirection(direction);
         }
     }
 }

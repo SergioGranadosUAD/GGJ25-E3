@@ -43,6 +43,10 @@ public class PlayerScript : MonoBehaviour
   private float m_jumpHeight = 10.0f;
   [SerializeField]
   private float m_armDistance = 1.5f;
+  [SerializeField]
+  private float m_airSpeedMultiplier = 5.0f;
+  [SerializeField]
+  private GameObject m_projectileGO;
 
   private Vector2 m_movementDir = Vector2.zero;
   private Vector2 m_aimDir = Vector2.zero;
@@ -54,14 +58,14 @@ public class PlayerScript : MonoBehaviour
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
   {
-      m_armGO = transform.GetChild(0).gameObject;
-    m_armGO.transform.position = transform.forward * m_armDistance;
+    m_armGO = transform.GetChild(0).gameObject;
+    m_armGO.transform.position = transform.right * m_armDistance;
   }
 
   // Update is called once per frame
   void Update()
   {
-    Rigidbody.linearVelocityX = Mathf.Clamp(Rigidbody.linearVelocityX, -m_speed, m_speed);
+    
     
   }
 
@@ -78,6 +82,8 @@ public class PlayerScript : MonoBehaviour
       {
         Rigidbody.AddForceX(value.Get<Vector2>().x * m_speed * 5);
       }
+      //Clamp to max speed in X axis.
+      Rigidbody.linearVelocityX = Mathf.Clamp(Rigidbody.linearVelocityX, -m_speed, m_speed);
     }
   }
 
@@ -107,7 +113,13 @@ public class PlayerScript : MonoBehaviour
 
   private void OnShoot(InputValue value)
   {
-
+    GameObject projectile = Instantiate(m_projectileGO, m_armGO.transform.position, Quaternion.identity) as GameObject;
+    if (projectile != null)
+    {
+      BulletBase bulletComp = projectile.GetComponent<BulletBase>();
+      bulletComp.setProjectileDirection(m_aimDir);
+      //Register to projectile manager
+    }
   }
 
   private void OnSpecial(InputValue value)
