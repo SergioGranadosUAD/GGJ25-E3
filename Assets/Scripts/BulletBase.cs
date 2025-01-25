@@ -12,15 +12,18 @@ public class BulletBase : MonoBehaviour
     [SerializeField]
     float m_resistance = 0.995f;
 
+    public float stopBackwardThreshold = 0.1f;
     private Vector2 m_directon;
 
     float m_timeActual;
 
     private Rigidbody2D rb;
 
+    private Vector2 force;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        GameManager.Instance.setNewPlayer(gameObject);
         rb = GetComponent<Rigidbody2D>();
         rb.linearDamping = 1f;
     }
@@ -28,7 +31,7 @@ public class BulletBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 force = new Vector2(m_directon.x, m_directon.y) * m_ForceAmount;
+        force = new Vector2(m_directon.x, m_directon.y) * m_ForceAmount;
         rb.AddForce(force);
 
         if (rb.linearVelocity.magnitude > m_MaxSpeed)
@@ -60,6 +63,17 @@ public class BulletBase : MonoBehaviour
     public void setDirectionShoot(Vector2 directoin)
     {
         m_directon = directoin;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject gameObjectTrigger = collision.gameObject;
+        if (gameObject == null)
+        {
+            return;
+        }
+
+        Destroy(gameObject);
     }
 }
 
