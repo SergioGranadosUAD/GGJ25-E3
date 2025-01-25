@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
         m_gameTime = 180.0f;
     }
 
-    void setPositionPalyer(GameObject playerGameObject)
+    public void setPositionPalyer(GameObject playerGameObject)
     {
         Transform spawnPoint = m_spawnPoint[m_currentSpawnIndex];
         playerGameObject.transform.position = spawnPoint.position;
