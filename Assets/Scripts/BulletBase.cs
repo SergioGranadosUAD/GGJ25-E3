@@ -23,7 +23,6 @@ public class BulletBase : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameManager.Instance.setNewPlayer(gameObject);
         rb = GetComponent<Rigidbody2D>();
         rb.linearDamping = 1f;
     }
