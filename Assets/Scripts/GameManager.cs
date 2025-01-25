@@ -12,14 +12,13 @@ public class GameManager : MonoBehaviour
     {
         public GameObject player;
         public int Score;
-        public int IDPlayer;
+        public int playerID;
     }
 
     public static GameManager Instance { get; private set; }
 
-    [SerializeField]
-    private List<Transform> m_spawnPoint;
-    private int currentSpawnIndex = 0;
+    private List<Transform> m_spawnPoint = new List<Transform>();
+    private int m_currentSpawnIndex = 0;
 
     [SerializeField]
     public float m_gameTime = 180.0f;
@@ -100,7 +99,7 @@ public class GameManager : MonoBehaviour
         PlayerData newPlayer = new PlayerData();
 
         newPlayer.player = player;
-        newPlayer.IDPlayer = m_playerList.Count + 1;
+        newPlayer.playerID = m_playerList.Count + 1;
         newPlayer.Score = 0;
 
         m_playerList.Add(newPlayer);
@@ -111,10 +110,10 @@ public class GameManager : MonoBehaviour
         GameObject playerGameObject = playerInput.gameObject;
         setNewPlayer(playerGameObject);
 
-        Transform spawnPoint = m_spawnPoint[currentSpawnIndex];
+        Transform spawnPoint = m_spawnPoint[m_currentSpawnIndex];
         playerGameObject.transform.position = spawnPoint.position;
 
-        currentSpawnIndex++;
+        m_currentSpawnIndex++;
     }
 
     private void OnPlayerLeft(PlayerInput playerInput)
@@ -124,8 +123,12 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log($"Nueva escena cargada: {scene.name}");
-        // Coloca aquí la lógica que quieras ejecutar al entrar en cada escena
+        GameObject obj = GameObject.FindWithTag("SpawnPoint");
+
+        foreach (Transform child in obj.transform)
+        {
+            m_spawnPoint.Add(child.gameObject.transform);
+        }
     }
 
 }
