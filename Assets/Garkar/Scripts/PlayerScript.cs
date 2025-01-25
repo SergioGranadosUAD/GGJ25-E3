@@ -80,7 +80,7 @@ public class PlayerScript : MonoBehaviour
       }
       else
       {
-        Rigidbody.AddForceX(value.Get<Vector2>().x * m_speed);
+        Rigidbody.AddForceX(value.Get<Vector2>().x * m_speed * 5);
       }
       //Clamp to max speed in X axis.
       Rigidbody.linearVelocityX = Mathf.Clamp(Rigidbody.linearVelocityX, -m_speed, m_speed);
