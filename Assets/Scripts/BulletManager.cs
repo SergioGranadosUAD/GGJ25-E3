@@ -6,34 +6,34 @@ public class BulletManager : MonoBehaviour
 {
     struct BulletData
     {
-        public int IDplayer;
+        public int playerID;
         public GameObject bullet;
     }
-    List<BulletData> listBullets = new List<BulletData>();
+    List<BulletData> bulletList = new List<BulletData>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
        
     }
 
-    public void setNewBullet(GameObject bullet, int IDplayer)
+    public void addNewBullet(GameObject bullet, int playerID)
     {
         BulletData data = new BulletData();
 
-        data.IDplayer = IDplayer;
+        data.playerID = playerID;
         data.bullet = bullet;
 
-        listBullets.Add(data);
+        bulletList.Add(data);
     }
 
-    public int getIDplayer(GameObject bullet)
+    public int getPlayerID(GameObject bullet)
     {
-        for (int i = listBullets.Count - 1; i > listBullets.Count; i--)
+        for (int i = bulletList.Count - 1; i > bulletList.Count; i--)
         {
-            if (listBullets[i].bullet == bullet)
+            if (bulletList[i].bullet == bullet)
             {
-                listBullets.Remove(listBullets[i]);
-                return listBullets[i].IDplayer;
+                bulletList.Remove(bulletList[i]);
+                return bulletList[i].playerID;
             }
         }
         return 0;

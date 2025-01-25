@@ -102,10 +102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7837a1293c4660d4895eaad5a7f50897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxSpeed: 20
-  m_ForceAmount: 250
-  m_timeLife: 2
+  m_maxSpeed: 10
+  m_forceAmount: 10
+  m_projectileLifetime: 5
   m_resistance: 0.95
+  m_stopBackwardThreshold: 0.1
 --- !u!58 &4896408800997150151
 CircleCollider2D:
   m_ObjectHideFlags: 0
