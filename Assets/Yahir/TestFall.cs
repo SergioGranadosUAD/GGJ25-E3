@@ -19,7 +19,7 @@ public class TestFall : MonoBehaviour
         if (collision != null)
         {
             GameObject gameObject = collision.gameObject;
-            GameManager.Instance.setPositionPalyer(gameObject);
+            GameManager.Instance.setPlayerPosition(gameObject);
         }
     }
 }

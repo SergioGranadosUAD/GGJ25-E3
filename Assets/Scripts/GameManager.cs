@@ -23,9 +23,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private float m_timeLimit = 180.0f;
 
-  private float m_currentTime = 0.0f;
+    private float m_currentTime = 0.0f;
 
-    [SerializeField]
     public TMP_Text m_textMeshPro;
 
     List<PlayerData> m_playerList = new List<PlayerData>();
@@ -129,9 +128,17 @@ public class GameManager : MonoBehaviour
         {
             m_spawnPoint.Add(child.gameObject.transform);
         }
+
+        GameObject objTime = GameObject.FindWithTag("Time");
+
+        if (objTime == null) { return; }
+
+        m_textMeshPro = objTime.GetComponentInChildren<TMP_Text>();
+
+        m_currentTime = m_timeLimit;
     }
 
-    void setPlayerPosition(GameObject playerGameObject)
+    public void setPlayerPosition(GameObject playerGameObject)
     {
         Transform spawnPoint = m_spawnPoint[m_currentSpawnIndex];
         playerGameObject.transform.position = spawnPoint.position;
