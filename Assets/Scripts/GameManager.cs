@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     struct PlayerData
     {
         public GameObject player;
+        public string playerName;
         public int Score;
         public int playerID;
     }
@@ -31,7 +32,9 @@ public class GameManager : MonoBehaviour
 
     private bool m_timeActive = true;
 
-    PlayerInputManager playerInputManager;
+    public PlayerInputManager playerInputManager;
+
+    public bool selectionPlayerInputActive = false;
 
     private void Awake()
     {
@@ -45,12 +48,15 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         playerInputManager = GetComponent<PlayerInputManager>();
+        if (playerInputManager == null) { return; }
     }
 
     private void OnEnable()
     {
         playerInputManager.onPlayerJoined += OnPlayerJoined;
         playerInputManager.onPlayerLeft += OnPlayerLeft;
+
+        playerInputManager.enabled = false;
 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
