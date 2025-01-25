@@ -169,6 +169,8 @@ MonoBehaviour:
   m_speed: 5
   m_jumpHeight: 300
   m_armDistance: 1.5
+  m_airSpeedMultiplier: 5
+  m_projectileGO: {fileID: 347499150317546348, guid: 037877a246b2195428b9579dacee47b1, type: 3}
 --- !u!50 &8764329884994397804
 Rigidbody2D:
   serializedVersion: 5
