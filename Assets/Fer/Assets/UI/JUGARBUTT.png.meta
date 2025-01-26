@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      JUGARBUTT_0: 5088804145035656463
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
