@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a74027152919640a450255fc36782d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_audio: {fileID: 8300000, guid: 2354d4880160cd54c874123703f8cf10, type: 3}
   m_listImageBackGround:
   - {fileID: 550813791}
   - {fileID: 1387414048}

@@ -11,6 +11,8 @@ using UnityEngine.InputSystem.Controls;
 public class ManagerSelection : MonoBehaviour
 {
     [SerializeField]
+    AudioClip m_audio;
+    [SerializeField]
     private List<Image> m_listImageBackGround = new List<Image>();
     [SerializeField]
     private List<Image> m_imagePlayer = new List<Image>();
@@ -34,6 +36,7 @@ public class ManagerSelection : MonoBehaviour
         {
             myButton.interactable = false; // Esto desactiva el botón
         }
+        AudioManager.Instance.PlayMusic(m_audio);
     }
 
     // Update is called once per frame
