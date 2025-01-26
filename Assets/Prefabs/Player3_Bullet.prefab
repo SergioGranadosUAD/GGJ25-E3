@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7880507108404404341, guid: 037877a246b2195428b9579dacee47b1, type: 3}
       propertyPath: m_maxSpeed
-      value: 7.8
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7880507108404404341, guid: 037877a246b2195428b9579dacee47b1, type: 3}
       propertyPath: m_resistance
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7880507108404404341, guid: 037877a246b2195428b9579dacee47b1, type: 3}
       propertyPath: m_forceAmount
-      value: 7.44
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7880507108404404341, guid: 037877a246b2195428b9579dacee47b1, type: 3}
       propertyPath: m_projectileDamage

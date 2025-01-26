@@ -318,7 +318,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_audio: {fileID: 8300000, guid: 4a2c381ede033ab48b22d8a94e3582cd, type: 3}
-  m_listImageBackGround: []
+  m_listImageBackGround:
+  - {fileID: 1182301860}
+  - {fileID: 1296032956}
+  - {fileID: 1344815744}
+  - {fileID: 763138088}
   m_text1: {fileID: 1215764802}
   m_text2: {fileID: 1582087098}
   m_text3: {fileID: 1784443864}
