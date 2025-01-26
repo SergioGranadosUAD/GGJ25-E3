@@ -497,6 +497,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _GameObject: {fileID: 7503942817861858373, guid: d0c429bcdcac6e448b99243fa5267e36, type: 3}
+  m_player1: {fileID: 447686305}
+  m_player2: {fileID: 1479981019}
+  m_player3: {fileID: 1593134606}
+  m_player4: {fileID: 83442220}
+  m_playerScore1: {fileID: 1632463516}
+  m_playerScore2: {fileID: 159805504}
+  m_playerScore3: {fileID: 1949077838}
+  m_playerScore4: {fileID: 224888179}
 --- !u!4 &271071292
 Transform:
   m_ObjectHideFlags: 0
@@ -546,7 +554,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: 479}
+  m_AnchoredPosition: {x: 3, y: 450}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &383596832
@@ -569,10 +577,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 180
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9071e5ad3964f4249846d07401b14d80, type: 2}
-  m_sharedMaterial: {fileID: -1730935215307206013, guid: 9071e5ad3964f4249846d07401b14d80, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 68249cb7d388e784b943cafa5e10f105, type: 2}
+  m_sharedMaterial: {fileID: -8144735488357937474, guid: 68249cb7d388e784b943cafa5e10f105, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -596,8 +604,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

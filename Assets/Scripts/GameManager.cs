@@ -24,7 +24,7 @@ public struct PlayerInputData
     {
         public GameObject player;
         public string playerName;
-        public int Score;
+        public int Score = 0;
         public int playerID;
     }
 
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
 
     public TMP_Text m_textMeshPro;
 
-    List<PlayerData> m_playerList = new List<PlayerData>();
+    public List<PlayerData> m_playerList = new List<PlayerData>();
 
     private bool m_timeActive = true;
 
