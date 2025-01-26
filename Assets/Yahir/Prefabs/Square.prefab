@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.13378248, y: 0.13885295, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.55, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8791116146757964852}
@@ -167,8 +167,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 5
-  m_jumpHeight: 300
-  m_armDistance: 1.5
+  m_jumpHeight: 250
+  m_armDistance: 0.7
+  m_airSpeedMultiplier: 5
+  m_projectileGO: {fileID: 347499150317546348, guid: 037877a246b2195428b9579dacee47b1, type: 3}
 --- !u!50 &8764329884994397804
 Rigidbody2D:
   serializedVersion: 5

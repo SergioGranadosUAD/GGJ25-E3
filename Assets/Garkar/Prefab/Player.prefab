@@ -100,10 +100,10 @@ GameObject:
   - component: {fileID: 7121452779396995328}
   - component: {fileID: 1426771456208616803}
   - component: {fileID: 4553932820340259386}
-  - component: {fileID: 4877224177068166335}
+  - component: {fileID: 537545387840135541}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.13378248, y: 0.13885295, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.45553, y: 0.45553, z: 0.45553}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4562791307999286372}
@@ -254,8 +254,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 3
-  m_jumpHeight: 300
-  m_armDistance: 1.5
+  m_trappedSpeed: 1
+  m_jumpHeight: 200
+  m_armDistance: 0.7
+  m_airSpeedMultiplier: 3
+  m_maxResistance: 100
+  m_shotCooldown: 0.4
+  m_trappedTime: 4
+  m_trappedGravityScale: -0.01
+  m_resistanceRegenTime: 4
+  m_trappedIFrameTime: 2
+  m_timeToStartRegenWhenShot: 3
   m_projectileGO: {fileID: 347499150317546348, guid: 037877a246b2195428b9579dacee47b1, type: 3}
 --- !u!50 &4553932820340259386
 Rigidbody2D:
@@ -284,8 +293,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &4877224177068166335
-CapsuleCollider2D:
+--- !u!61 &537545387840135541
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -319,5 +328,14 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
-  m_Direction: 0
+  m_EdgeRadius: 0

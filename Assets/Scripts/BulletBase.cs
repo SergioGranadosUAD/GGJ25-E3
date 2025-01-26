@@ -8,6 +8,10 @@ public class BulletBase : MonoBehaviour
     private float m_forceAmount = 10.0f;
     [SerializeField]
     private float m_projectileLifetime = 100.0f;
+  [SerializeField]
+  private float m_projectileDamage = 10.0f;
+  [SerializeField]
+  private float m_projectilePushForce = 10.0f;
 
     [SerializeField]
     float m_resistance = 0.995f;
@@ -82,11 +86,6 @@ public class BulletBase : MonoBehaviour
     }
   }
 
-  public void setProjectileDirection(Vector2 dir)
-  {
-    m_direction = dir;
-  }
-
   private void onProjectileHit()
   {
     Destroy(gameObject);
@@ -95,11 +94,15 @@ public class BulletBase : MonoBehaviour
   void OnTriggerEnter2D(Collider2D collision)
   {
     GameObject gameObjectTrigger = collision.gameObject;
-    if (gameObject == null)
+    if (gameObjectTrigger.CompareTag("Player"))
     {
-        return;
+      PlayerScript playerScript = gameObjectTrigger.GetComponent<PlayerScript>();
+      if(playerScript != null)
+      {
+        playerScript.damagePlayer(m_direction, m_projectileDamage, m_projectilePushForce);
+      }
     }
 
-  onProjectileHit();
+    onProjectileHit();
   }
 }
