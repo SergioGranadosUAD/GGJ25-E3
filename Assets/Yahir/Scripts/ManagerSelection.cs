@@ -11,7 +11,9 @@ public class ManagerSelection : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        //GameManager.Instance.playerInputManager.enabled = true;
+        GameManager.Instance.playerInputManager.enabled = true;
+        GameManager.Instance.playerInputManager.EnableJoining();
+    
     }
 
     // Update is called once per frame

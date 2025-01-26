@@ -53,19 +53,13 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        playerInputManager.onPlayerJoined += OnPlayerJoined;
-        playerInputManager.onPlayerLeft += OnPlayerLeft;
-
-        //playerInputManager.enabled = false;
+        playerInputManager.enabled = false;
 
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDisable()
     {
-        playerInputManager.onPlayerJoined -= OnPlayerJoined;
-        playerInputManager.onPlayerLeft -= OnPlayerLeft;
-
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 

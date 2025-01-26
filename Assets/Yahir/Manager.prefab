@@ -45,8 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36b86225911764f4faad1efa100e1a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_gameTime: 180
+  m_timeLimit: 180
   m_textMeshPro: {fileID: 0}
+  playerInputManager: {fileID: 0}
+  selectionPlayerInputActive: 0
 --- !u!114 &2432370512636563320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,9 +62,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NotificationBehavior: 0
-  m_MaxPlayerCount: -1
-  m_AllowJoining: 1
-  m_JoinBehavior: 0
+  m_MaxPlayerCount: 4
+  m_AllowJoining: 0
+  m_JoinBehavior: 1
   m_PlayerJoinedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -70,9 +72,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_JoinAction:
-    m_UseReference: 0
+    m_UseReference: 1
     m_Action:
-      m_Name: 
+      m_Name: Join
       m_Type: 0
       m_ExpectedControlType: 
       m_Id: d8379fd9-5373-4f1c-a4bd-e647beb0f802
@@ -80,7 +82,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_Reference: {fileID: 0}
+    m_Reference: {fileID: -1127943583410734624, guid: 08456b1dcbef97a44bb717e5b4560f39, type: 3}
   m_PlayerPrefab: {fileID: 3054029689371677036, guid: 6131276d43779b145b14e9a3758be07c, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
