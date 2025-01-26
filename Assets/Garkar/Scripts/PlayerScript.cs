@@ -84,6 +84,8 @@ public class PlayerScript : MonoBehaviour
   private float m_pushForce = 10.0f;
   [SerializeField]
   private float m_trappedTimeReductionValue = 0.1f;
+  [SerializeField]
+  private float m_trappedBounceMultiplier = 0.7f;
   
   [SerializeField]
   private GameObject m_defaultProjectileGO;
@@ -329,7 +331,7 @@ public class PlayerScript : MonoBehaviour
       }
       else
       {
-        Rigidbody.linearVelocity = Vector2.Reflect(m_currentVelocity, collision.contacts[0].normal);
+        Rigidbody.linearVelocity = Vector2.Reflect(m_currentVelocity * m_trappedBounceMultiplier, collision.contacts[0].normal);
       }
     }
     else if(collision.transform.CompareTag("Player"))

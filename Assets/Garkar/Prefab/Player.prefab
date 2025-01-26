@@ -258,7 +258,7 @@ MonoBehaviour:
   m_jumpHeight: 300
   m_armDistance: 1.5
   m_airSpeedMultiplier: 5
-  m_maxResistance: 20
+  m_maxResistance: 40
   m_shotCooldown: 1
   m_trappedTime: 5
   m_trappedGravityScale: 0.01
@@ -267,6 +267,7 @@ MonoBehaviour:
   m_timeToStartRegenWhenShot: 3
   m_pushForce: 10
   m_trappedTimeReductionValue: 0.1
+  m_trappedBounceMultiplier: 0.7
   m_defaultProjectileGO: {fileID: 6787514642789969296, guid: cc66d816f9b0ca94b81feb55eef52284, type: 3}
 --- !u!50 &4553932820340259386
 Rigidbody2D:
