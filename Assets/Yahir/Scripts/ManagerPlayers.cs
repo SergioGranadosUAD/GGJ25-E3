@@ -9,6 +9,12 @@ public class ManagerPlayers : MonoBehaviour
 {
     [SerializeField]
     private GameObject _GameObject;
+    [SerializeField]
+    private GameObject _GameObject1;
+    [SerializeField]
+    private GameObject _GameObject2;
+    [SerializeField]
+    private GameObject _GameObject3;
 
     [SerializeField]
     public GameObject m_player1;

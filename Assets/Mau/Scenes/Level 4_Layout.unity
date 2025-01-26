@@ -284,7 +284,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a555e516c4306e24fb7d7a2a7e9d430e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _GameObject: {fileID: 7503942817861858373, guid: d0c429bcdcac6e448b99243fa5267e36, type: 3}
+  _GameObject: {fileID: 7338010936633151525, guid: 4c9182a0add44f840ae5808103eb4b57, type: 3}
+  _GameObject1: {fileID: 0}
+  _GameObject2: {fileID: 0}
+  _GameObject3: {fileID: 0}
   m_player1: {fileID: 282316261}
   m_player2: {fileID: 616153267}
   m_player3: {fileID: 951940134}
