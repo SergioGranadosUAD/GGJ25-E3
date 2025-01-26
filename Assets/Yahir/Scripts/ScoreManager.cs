@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEditor.UI;
 using UnityEngine.InputSystem.Controls;
 
 public class ScoreManager : MonoBehaviour
@@ -23,11 +22,6 @@ public class ScoreManager : MonoBehaviour
     private TMP_Text m_text3;
     [SerializeField]
     private TMP_Text m_text4;
-
-    bool m_player1 = false;
-    bool m_player2 = false;
-    bool m_player3 = false;
-    bool m_player4 = false;
 
     public Button myButton; // Arrastra tu botón desde el editor a este campo
 

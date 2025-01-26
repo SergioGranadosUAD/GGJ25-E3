@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEditor.UI;
 using UnityEngine.InputSystem.Controls;
 
 public class ManagerSelection : MonoBehaviour
