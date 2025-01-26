@@ -93,9 +93,16 @@ public class ManagerPlayers : MonoBehaviour
 
     private void instancePlayers()
     {
-        for (int i = 0; i < GameManager.Instance.getSizeListPlayers(); i++)
+        GameManager.Instance.SetPlayableObject(_GameObject, 0);
+        GameManager.Instance.SetPlayableObject(_GameObject1, 1);
+        if (GameManager.Instance.getSizeListPlayers() == 4)
         {
-            GameManager.Instance.SetPlayableObject(_GameObject, i);
+            GameManager.Instance.SetPlayableObject(_GameObject2, 2);
+            GameManager.Instance.SetPlayableObject(_GameObject3, 3);
+        }
+        else if (GameManager.Instance.getSizeListPlayers() == 3)
+        {
+            GameManager.Instance.SetPlayableObject(_GameObject2, 2);
         }
     }
 }
