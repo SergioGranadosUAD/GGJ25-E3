@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Xml.Schema;
 using Unity.VisualScripting;
@@ -13,10 +12,9 @@ public class PlayerScript : MonoBehaviour
 {
   //Components
   private PlayerInput m_playerInput;
-  public PlayerInput playerInput
+  public PlayerInput PlayerInput
   {
-    get
-    {
+    get {
       if (m_playerInput == null)
       {
         m_playerInput = GetComponent<PlayerInput>();
@@ -26,7 +24,7 @@ public class PlayerScript : MonoBehaviour
   }
 
   private Rigidbody2D m_rigidbody2D;
-  public Rigidbody2D rigidbody2DComp
+  public Rigidbody2D Rigidbody
   {
     get
     {
@@ -39,7 +37,7 @@ public class PlayerScript : MonoBehaviour
   }
 
   private BoxCollider2D m_boxCollider;
-  public BoxCollider2D boxCollider
+  public BoxCollider2D BoxCollider
   {
     get
     {
@@ -51,25 +49,12 @@ public class PlayerScript : MonoBehaviour
     }
   }
 
-  private Animator m_animator;
-  public Animator animator
-  {
-    get
-    {
-      if (m_animator == null)
-      {
-        m_animator = GetComponent<Animator>();
-      }
-      return m_animator;
-    }
-  }
-
-  public bool IsTrapped
+  public bool IsTrapped 
   {
     get
     {
       return m_isTrapped;
-    }
+    } 
   }
 
   [SerializeField]
@@ -102,14 +87,9 @@ public class PlayerScript : MonoBehaviour
   private float m_trappedTimeReductionValue = 0.1f;
   [SerializeField]
   private float m_trappedBounceMultiplier = 0.7f;
-
+  
   [SerializeField]
   private GameObject m_defaultProjectileGO;
-  [SerializeField]
-  private List<RuntimeAnimatorController> m_playerAnimationSets;
-  [SerializeField]
-  private List<Sprite> m_weaponTextures;
-
 
     [SerializeField]
     private float m_limitTimeEnemy = 5.0f;
@@ -136,13 +116,13 @@ public class PlayerScript : MonoBehaviour
   private PowerupType m_currentPowerup = PowerupType.None;
   private GameObject m_currentProjectileGO;
 
-  public PlayerInput m_currentPlayerInput;
+    public PlayerInput m_currentPlayerInput;
 
-  InputAction m_moveAction;
-  InputAction m_aimAction;
-  InputAction m_jumpAction;
-  InputAction m_shootAtion;
-  InputAction m_especialAction;
+    InputAction m_moveAction;
+    InputAction m_aimAction;
+    InputAction m_jumpAction;
+    InputAction m_shootAtion;
+    InputAction m_especialAction;
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
   {
@@ -150,35 +130,35 @@ public class PlayerScript : MonoBehaviour
     m_armGO.transform.position = transform.position + transform.right * m_armDistance;
     m_currentResistance = m_maxResistance;
     m_currentProjectileGO = m_defaultProjectileGO;
-    if (playerInput)
+        if (PlayerInput)
+        {
+            SetPlayernput(PlayerInput);
+        }
+
+  }
+
+    public void SetPlayernput(PlayerInput pi)
     {
-      SetPlayernput(playerInput);
+        m_playerInput = pi;
+
+        m_moveAction = m_playerInput.actions.FindAction("Movement");
+        m_aimAction = m_playerInput.actions.FindAction("Aim");
+        m_jumpAction = m_playerInput.actions.FindAction("Jump");
+        m_shootAtion = m_playerInput.actions.FindAction("Shoot");
+        m_especialAction = m_playerInput.actions.FindAction("Special");
+        //m_playerInput.actions.FindAction("Movement").canceled += OnMove;
+        //m_playerInput.actions.FindAction("Aim").performed += OnAimAct;
+        //m_playerInput.actions.FindAction("Aim").canceled += OnAimAct;
+        //m_playerInput.actions.FindAction("Jump").performed += OnJumpAct;
+        //m_playerInput.actions.FindAction("Shoot").performed += OnShootAct;
+        //m_playerInput.actions.FindAction("Shoot").canceled += OnShootAct;
+        //m_playerInput.actions.FindAction("Special").canceled += OnSpecialAct;
     }
-
-  }
-
-  public void SetPlayernput(PlayerInput pi)
-  {
-    m_playerInput = pi;
-
-    m_moveAction = m_playerInput.actions.FindAction("Movement");
-    m_aimAction = m_playerInput.actions.FindAction("Aim");
-    m_jumpAction = m_playerInput.actions.FindAction("Jump");
-    m_shootAtion = m_playerInput.actions.FindAction("Shoot");
-    m_especialAction = m_playerInput.actions.FindAction("Special");
-    //m_playerInput.actions.FindAction("Movement").canceled += OnMove;
-    //m_playerInput.actions.FindAction("Aim").performed += OnAimAct;
-    //m_playerInput.actions.FindAction("Aim").canceled += OnAimAct;
-    //m_playerInput.actions.FindAction("Jump").performed += OnJumpAct;
-    //m_playerInput.actions.FindAction("Shoot").performed += OnShootAct;
-    //m_playerInput.actions.FindAction("Shoot").canceled += OnShootAct;
-    //m_playerInput.actions.FindAction("Special").canceled += OnSpecialAct;
-  }
 
   // Update is called once per frame
   void Update()
   {
-    m_currentVelocity = rigidbody2DComp.linearVelocity;
+    m_currentVelocity = Rigidbody.linearVelocity;
     checkIfCanShoot();
     checkIfCanRegen();
     checkGrounded();
@@ -200,48 +180,31 @@ public class PlayerScript : MonoBehaviour
   }
     private void OnMove(InputAction.CallbackContext context)
     {
-      OnJump();
+        if (context.performed) 
+        {
+            OnMovement(context.ReadValue<Vector2>());
+        }
     }
-    m_isShooting = m_shootAtion.IsPressed();
-  }
-  private void OnMove(InputAction.CallbackContext context)
-  {
-    if (context.performed)
-    {
-      OnMovement(context.ReadValue<Vector2>());
-    }
-  }
-
-  private void OnMovement(Vector2 value)
+        private void OnMovement(Vector2 value)
   {
     Vector2 inputDir = value.normalized;
-
-    if(inputDir.magnitude > 0.0f)
-    {
-      animator.SetBool("isMoving", true);
-    }
-    else
-    {
-      animator.SetBool("isMoving", false);
-    }
-
     if (!m_isTrapped)
     {
-      if (m_isGrounded)
+      if(m_isGrounded)
       {
-        rigidbody2DComp.linearVelocityX = inputDir.x * m_speed;
-
+        Rigidbody.linearVelocityX = inputDir.x * m_speed;
+        
       }
       else
       {
-        rigidbody2DComp.AddForceX(inputDir.x * m_speed * m_airSpeedMultiplier);
+        Rigidbody.AddForceX(inputDir.x * m_speed * m_airSpeedMultiplier);
       }
       //Clamp to max speed in X axis.
-      rigidbody2DComp.linearVelocityX = Mathf.Clamp(rigidbody2DComp.linearVelocityX, -m_speed, m_speed);
+      Rigidbody.linearVelocityX = Mathf.Clamp(Rigidbody.linearVelocityX, -m_speed, m_speed);
     }
     else
     {
-      rigidbody2DComp.AddForce(inputDir * m_trappedSpeed);
+      Rigidbody.AddForce(inputDir * m_trappedSpeed);
       //if(Rigidbody.linearVelocity.magnitude > m_trappedSpeed)
       //{
       //  Rigidbody.linearVelocity = Rigidbody.linearVelocity.normalized * m_trappedSpeed;
@@ -249,15 +212,15 @@ public class PlayerScript : MonoBehaviour
     }
   }
 
-  private void OnAimAct(InputAction.CallbackContext context)
-  {
-    if (context.performed)
+    private void OnAimAct(InputAction.CallbackContext context)
     {
-      OnAim(context.ReadValue<Vector2>());
+        if (context.performed)
+        {
+            OnAim(context.ReadValue<Vector2>());
+        }
     }
-  }
 
-  private void OnAim(Vector2 value)
+    private void OnAim(Vector2 value)
   {
     if (value.magnitude >= 0.5f)
     {
@@ -265,45 +228,42 @@ public class PlayerScript : MonoBehaviour
     }
     m_armGO.transform.position = new Vector2(transform.position.x, transform.position.y) + m_aimDir * m_armDistance;
   }
-
-  private void OnJumpAct(InputAction.CallbackContext context)
-  {
-    if (context.performed)
+    private void OnJumpAct(InputAction.CallbackContext context)
     {
-      OnJump();
+        if (context.performed)
+        {
+            OnJump();
+        }
     }
-  }
-
-  private void OnJump()
+    private void OnJump()
   {
-    if (m_isTrapped)
+    if(m_isTrapped)
     {
       m_currentTrappedTimer += m_trappedTimeReductionValue;
       return;
     }
 
-    if (m_isGrounded)
+    if(m_isGrounded)
     {
-      rigidbody2DComp.AddForceY(m_jumpHeight);
+      Rigidbody.AddForceY(m_jumpHeight);
     }
-    else if (!m_hasDoubleJumped)
+    else if(!m_hasDoubleJumped)
     {
-      rigidbody2DComp.linearVelocityY = 0;
-      rigidbody2DComp.AddForceY(m_jumpHeight);
+      Rigidbody.linearVelocityY = 0;
+      Rigidbody.AddForceY(m_jumpHeight);
       m_hasDoubleJumped = true;
     }
   }
-
-  private void OnShootAct(InputAction.CallbackContext context)
-  {
-    if (context.performed)
+    private void OnShootAct(InputAction.CallbackContext context)
     {
-      OnShoot();
+        if (context.performed)
+        {
+            OnShoot();
+        }
     }
-  }
-  private void OnShoot()
+    private void OnShoot()
   {
-    m_isShooting = true;
+      m_isShooting = true;
     //if (value > 0.5f)
     //{
     //}
@@ -312,16 +272,14 @@ public class PlayerScript : MonoBehaviour
     //  m_isShooting = false;
     //}
   }
-
-  private void OnSpecialAct(InputAction.CallbackContext context)
-  {
-    if (context.performed)
+    private void OnSpecialAct(InputAction.CallbackContext context)
     {
-      //OnSpecial(context.ReadValue<float>());
+        if (context.performed)
+        {
+            //OnSpecial(context.ReadValue<float>());
+        }
     }
-  }
-
-  private void OnSpecial(InputValue value)
+    private void OnSpecial(InputValue value)
   {
 
   }
@@ -345,13 +303,12 @@ public class PlayerScript : MonoBehaviour
         trapPlayer();
       }
     }
-    rigidbody2DComp.linearVelocity = dir * pushForce;
+    Rigidbody.linearVelocity = dir * pushForce;
     m_currentRegenTime = 0.0f;
   }
 
   private void trapPlayer()
   {
-    animator.SetBool("isTrapped", true);
     StartCoroutine(startTrappedTimer());
   }
 
@@ -372,7 +329,7 @@ public class PlayerScript : MonoBehaviour
     {
       BulletBase bulletComp = projectile.GetComponent<BulletBase>();
       bulletComp.Direction = m_aimDir;
-      bulletComp.OwningPlayerID = playerInput.playerIndex;
+      bulletComp.OwningPlayerID = PlayerInput.playerIndex;
 
       StartCoroutine(startShotCooldownTimer());
     }
@@ -391,29 +348,26 @@ public class PlayerScript : MonoBehaviour
       }
     }
   }
-
   private void checkGrounded()
   {
-    if (m_isTrapped)
+    if(m_isTrapped)
     {
       return;
     }
 
     LayerMask layerMask = LayerMask.GetMask("Walls");
 
-    Vector2[] points = new Vector2[3] { new Vector2(boxCollider.bounds.min.x, boxCollider.bounds.min.y),
-                                        new Vector2(boxCollider.bounds.max.x, boxCollider.bounds.min.y),
-                                        new Vector2(boxCollider.bounds.center.x, boxCollider.bounds.min.y)
+    Vector2[] points = new Vector2[3] { new Vector2(BoxCollider.bounds.min.x, BoxCollider.bounds.min.y),
+                                        new Vector2(BoxCollider.bounds.max.x, BoxCollider.bounds.min.y),
+                                        new Vector2(BoxCollider.bounds.center.x, BoxCollider.bounds.min.y)
                                         };
 
     //
-    for (int i = 0; i < points.Length; ++i)
+    for(int i = 0; i < points.Length; ++i)
     {
-      if (Physics2D.Raycast(points[i], Vector3.down, .1f, layerMask))
-      {
+      if (Physics2D.Raycast(points[i], Vector3.down, .1f, layerMask)) {
         Debug.DrawRay(points[i], Vector3.down * .1f, Color.green);
         m_isGrounded = true;
-        animator.SetBool("isJumping", m_isGrounded);
         m_hasDoubleJumped = false;
         return;
       }
@@ -423,13 +377,12 @@ public class PlayerScript : MonoBehaviour
       }
     }
 
-    float maxWalljumpHeight = boxCollider.bounds.max.y - boxCollider.size.y * .75f;
-    Vector2 leftWalljumpPoint = new Vector2(boxCollider.bounds.min.x, maxWalljumpHeight);
+    float maxWalljumpHeight = BoxCollider.bounds.max.y - BoxCollider.size.y * .75f;
+    Vector2 leftWalljumpPoint = new Vector2(BoxCollider.bounds.min.x, maxWalljumpHeight);
     if (Physics2D.Raycast(leftWalljumpPoint, Vector3.left, .1f, layerMask))
     {
       Debug.DrawRay(leftWalljumpPoint, Vector3.left * .1f, Color.green);
       m_isGrounded = true;
-      animator.SetBool("isJumping", m_isGrounded);
       m_hasDoubleJumped = false;
       return;
     }
@@ -438,12 +391,11 @@ public class PlayerScript : MonoBehaviour
       Debug.DrawRay(leftWalljumpPoint, Vector3.left * .1f, Color.red);
     }
 
-    Vector2 rightWalljumpPoint = new Vector2(boxCollider.bounds.max.x, maxWalljumpHeight);
+    Vector2 rightWalljumpPoint = new Vector2(BoxCollider.bounds.max.x, maxWalljumpHeight);
     if (Physics2D.Raycast(rightWalljumpPoint, Vector3.right, .1f, layerMask))
     {
       Debug.DrawRay(rightWalljumpPoint, Vector3.right * .1f, Color.green);
       m_isGrounded = true;
-      animator.SetBool("isJumping", m_isGrounded);
       m_hasDoubleJumped = false;
       return;
     }
@@ -454,30 +406,29 @@ public class PlayerScript : MonoBehaviour
 
     //No ground found
     m_isGrounded = false;
-    animator.SetBool("isJumping", m_isGrounded);
   }
 
   private void OnCollisionEnter2D(Collision2D collision)
   {
-    if (collision.transform.CompareTag("Walls"))
+    if(collision.transform.CompareTag("Walls"))
     {
-      if (!m_isTrapped)
+      if(!m_isTrapped)
       {
-        rigidbody2DComp.linearVelocityX = 0;
+        Rigidbody.linearVelocityX = 0;
       }
       else
       {
-        rigidbody2DComp.linearVelocity = Vector2.Reflect(m_currentVelocity * m_trappedBounceMultiplier, collision.contacts[0].normal);
+        Rigidbody.linearVelocity = Vector2.Reflect(m_currentVelocity * m_trappedBounceMultiplier, collision.contacts[0].normal);
       }
     }
-    else if (collision.transform.CompareTag("Player"))
+    else if(collision.transform.CompareTag("Player"))
     {
       PlayerScript enemyPlayer = collision.gameObject.gameObject.GetComponent<PlayerScript>();
       if (enemyPlayer != null)
       {
-        if (enemyPlayer.IsTrapped)
+        if(enemyPlayer.IsTrapped)
         {
-          enemyPlayer.rigidbody2DComp.AddForce(rigidbody2DComp.linearVelocity.normalized * m_pushForce);
+          enemyPlayer.Rigidbody.AddForce(Rigidbody.linearVelocity.normalized * m_pushForce);
         }
       }
     }
@@ -487,7 +438,7 @@ public class PlayerScript : MonoBehaviour
   {
     m_canShoot = false;
     float currentTime = 0;
-    while (currentTime < m_shotCooldown)
+    while(currentTime < m_shotCooldown)
     {
       currentTime += Time.deltaTime;
       yield return null;
@@ -497,8 +448,8 @@ public class PlayerScript : MonoBehaviour
 
   private IEnumerator startTrappedTimer()
   {
-    rigidbody2DComp.sharedMaterial.bounciness = 1.0f;
-    rigidbody2DComp.gravityScale = m_trappedGravityScale;
+    Rigidbody.sharedMaterial.bounciness = 1.0f;
+    Rigidbody.gravityScale = m_trappedGravityScale;
     m_isTrapped = true;
     m_currentTrappedTimer = 0;
     while (m_currentTrappedTimer < m_trappedTime)
@@ -506,20 +457,19 @@ public class PlayerScript : MonoBehaviour
       m_currentTrappedTimer += Time.deltaTime;
       yield return null;
     }
-    rigidbody2DComp.sharedMaterial.bounciness = 0.0f;
-    rigidbody2DComp.gravityScale = 1.0f;
+    Rigidbody.sharedMaterial.bounciness = 0.0f;
+    Rigidbody.gravityScale = 1.0f;
     m_isTrapped = false;
     m_currentResistance = m_maxResistance;
-    animator.SetBool("isTrapped", false);
 
     m_canBeTrapped = false;
     m_currentTrappedTimer = 0;
-    while (m_currentTrappedTimer < m_trappedIFrameTime)
+    while(m_currentTrappedTimer < m_trappedIFrameTime)
     {
       m_currentTrappedTimer += Time.deltaTime;
       yield return null;
     }
     m_canBeTrapped = true;
   }
-
+  
 }
