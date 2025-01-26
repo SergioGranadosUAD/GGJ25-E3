@@ -1884,7 +1884,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 7592430052ff4d0408a800c31f87ad73, type: 3}
     - target: {fileID: 5773162893521782275, guid: 8326f849619c9fb43998862aa865e301, type: 3}
       propertyPath: m_timeLimit
-      value: 10
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 6509964383520938120, guid: 8326f849619c9fb43998862aa865e301, type: 3}
       propertyPath: m_Name
