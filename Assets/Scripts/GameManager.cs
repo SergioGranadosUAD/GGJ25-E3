@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
 
     public bool selectionPlayerInputActive = false;
 
+    public List<PlayerInput> m_playersInstance = new List<PlayerInput>();
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -53,6 +55,7 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
+        playerInputManager.onPlayerJoined += OnPlayerJoined;
         playerInputManager.enabled = false;
 
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -107,15 +110,11 @@ public class GameManager : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput playerInput)
     {
+        m_playersInstance.Add(playerInput);
         GameObject playerGameObject = playerInput.gameObject;
         addNewPlayer(playerGameObject);
 
-        setPlayerPosition(playerGameObject);
-    }
-
-    private void OnPlayerLeft(PlayerInput playerInput)
-    {
-
+        //setPlayerPosition(playerGameObject);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -151,4 +150,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int getSizeListPlayers()
+    {
+        return m_playerList.Count;
+    }
+
+    public void SetPlayableObject(GameObject newPlayerPrefab, int i)
+    {
+        GameObject newPlayer = Instantiate(newPlayerPrefab);
+        newPlayer.transform.position = m_playersInstance[i].transform.position;
+
+        // Asignar el PlayerInput al nuevo jugador
+        m_playersInstance[i].transform.SetParent(newPlayer.transform);
+        setPlayerPosition(newPlayer);
+
+        // Otras configuraciones si es necesario
+    }
 }
