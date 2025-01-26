@@ -97,10 +97,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2322578962080202205}
   - component: {fileID: 6892080760581168258}
-  - component: {fileID: 7121452779396995328}
   - component: {fileID: 1426771456208616803}
   - component: {fileID: 4553932820340259386}
   - component: {fileID: 537545387840135541}
+  - component: {fileID: 9211937301422251418}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -179,68 +179,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7121452779396995328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7503942817861858373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 08456b1dcbef97a44bb717e5b4560f39, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 2c5cdfc7-6ffe-432d-9ad6-1f6cf97c4744
-    m_ActionName: 'GameControls/Movement[/DualShock4GamepadHID/leftStick,/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID/dpad/down,/DualShock4GamepadHID/dpad/left,/DualShock4GamepadHID/dpad/right]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 20aa4b3f-a30a-4d7e-b9db-e3513c287844
-    m_ActionName: 'GameControls/Aim[/DualShock4GamepadHID/rightStick]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a8b3d916-3ac5-4de1-92b8-99a297a14744
-    m_ActionName: 'GameControls/Jump[/DualShock4GamepadHID/buttonSouth]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 043bb31d-8602-4022-9ba6-9f12c933d9c5
-    m_ActionName: 'GameControls/Shoot[/DualShock4GamepadHID/rightTrigger]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 450f8151-2a72-4c89-9545-e84aef7c99c7
-    m_ActionName: 'GameControls/Special[/DualShock4GamepadHID/leftTrigger]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: d1f39899-c23d-4008-aec4-21fd945ca1fc
-    m_ActionName: 'UIControls/Navigate[/DualShock4GamepadHID/leftStick,/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID/dpad/down,/DualShock4GamepadHID/dpad/left,/DualShock4GamepadHID/dpad/right]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 68aa2d4b-161d-4759-b9d9-55f1a66be3f8
-    m_ActionName: 'UIControls/Interact[/DualShock4GamepadHID/buttonSouth,/DualShock4GamepadHID/start]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 97c90a78-7895-45b0-9cf2-aa3f2fa73a6c
-    m_ActionName: 'UIControls/Back[/DualShock4GamepadHID/buttonEast]'
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
-  m_DefaultActionMap: GameControls
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &1426771456208616803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,3 +291,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!95 &9211937301422251418
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7503942817861858373}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 138fa234f187c0c4e81f757945fb50f5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
