@@ -258,14 +258,16 @@ MonoBehaviour:
   m_jumpHeight: 300
   m_armDistance: 1.5
   m_airSpeedMultiplier: 5
-  m_maxResistance: 100
+  m_maxResistance: 20
   m_shotCooldown: 1
   m_trappedTime: 5
   m_trappedGravityScale: 0.01
   m_resistanceRegenTime: 5
   m_trappedIFrameTime: 4
   m_timeToStartRegenWhenShot: 3
-  m_projectileGO: {fileID: 347499150317546348, guid: 037877a246b2195428b9579dacee47b1, type: 3}
+  m_pushForce: 10
+  m_trappedTimeReductionValue: 0.1
+  m_defaultProjectileGO: {fileID: 6787514642789969296, guid: cc66d816f9b0ca94b81feb55eef52284, type: 3}
 --- !u!50 &4553932820340259386
 Rigidbody2D:
   serializedVersion: 5
@@ -303,7 +305,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 39b461cb72c24814987cb0eb7068cb37, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
