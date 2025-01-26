@@ -206,7 +206,7 @@ MonoBehaviour:
   m_pushForce: 10
   m_trappedTimeReductionValue: 0.1
   m_trappedBounceMultiplier: 0.3
-  m_defaultProjectileGO: {fileID: 6787514642789969296, guid: cc66d816f9b0ca94b81feb55eef52284, type: 3}
+  m_defaultProjectileGO: {fileID: 6787514642789969296, guid: b3af0eacbb4a6bc4e82273fb898fd15f, type: 3}
   m_playerAnimationSets:
   - {fileID: 9100000, guid: 138fa234f187c0c4e81f757945fb50f5, type: 2}
   - {fileID: 0}

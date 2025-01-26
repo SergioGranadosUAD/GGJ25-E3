@@ -10,4 +10,10 @@ public class ChangeScene : MonoBehaviour
         Debug.Log("ChangeSceneTo" + nombre);
         SceneManager.LoadScene(nombre);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
 }
