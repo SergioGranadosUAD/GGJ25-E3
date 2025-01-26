@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2726530927984078627, guid: 3b5c2a6347370ca42a497b9e65518ddc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_speed: 3
   m_trappedSpeed: 1
   m_jumpHeight: 250
-  m_armDistance: 0.7
+  m_armDistance: 1
   m_airSpeedMultiplier: 3
   m_maxResistance: 100
   m_shotCooldown: 0.4
@@ -270,7 +270,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.7}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -280,7 +280,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 2.25, y: 3}
   m_EdgeRadius: 0
 --- !u!95 &9211937301422251418
 Animator:

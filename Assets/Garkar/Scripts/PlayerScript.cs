@@ -63,6 +63,19 @@ public class PlayerScript : MonoBehaviour
     }
   }
 
+  private SpriteRenderer m_armSpriteRenderer;
+  public SpriteRenderer ArmSpriteRenderer
+  {
+    get
+    {
+      if(m_armSpriteRenderer == null)
+      {
+        m_armSpriteRenderer = m_armGO.GetComponent<SpriteRenderer>();
+      }
+      return m_armSpriteRenderer;
+    }
+  }
+
   private Animator m_animator;
   public Animator animator
   {
@@ -273,7 +286,21 @@ public class PlayerScript : MonoBehaviour
     {
       m_aimDir = value.normalized;
     }
-    m_armGO.transform.position = new Vector2(transform.position.x, transform.position.y) + m_aimDir * m_armDistance;
+    m_armGO.transform.localPosition = BoxCollider.offset + m_aimDir * m_armDistance;
+
+    Vector3 rotatedVector = Quaternion.Euler(0, 0, 90) * value;
+    m_armGO.transform.rotation = Quaternion.LookRotation(Vector3.forward, rotatedVector);
+    if (value.x >= 0.0f)
+    {
+      //ArmSpriteRenderer.flipX = true;
+      ArmSpriteRenderer.flipY = false;
+      
+    }
+    else
+    {
+      //ArmSpriteRenderer.flipX = false;
+      ArmSpriteRenderer.flipY= true;
+    }
   }
   private void OnJumpAct(InputAction.CallbackContext context)
   {
@@ -293,6 +320,7 @@ public class PlayerScript : MonoBehaviour
     if (m_isGrounded)
     {
       Rigidbody.AddForceY(m_jumpHeight);
+      Rigidbody.linearVelocityY = Mathf.Min(Rigidbody.linearVelocity.y, m_speed);
     }
     else if (!m_hasDoubleJumped)
     {
@@ -500,6 +528,7 @@ public class PlayerScript : MonoBehaviour
 
   private IEnumerator startTrappedTimer()
   {
+    m_armGO.SetActive(false);
     animator.SetBool("isTrapped", true);
     Rigidbody.sharedMaterial.bounciness = 1.0f;
     Rigidbody.gravityScale = m_trappedGravityScale;
@@ -511,6 +540,7 @@ public class PlayerScript : MonoBehaviour
       yield return null;
     }
 
+    m_armGO.SetActive(true);
     animator.SetBool("isTrapped", false);
     Rigidbody.sharedMaterial.bounciness = 0.0f;
     Rigidbody.gravityScale = 1.0f;
