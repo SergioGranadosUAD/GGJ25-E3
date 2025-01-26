@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 347499150317546348, guid: 037877a246b2195428b9579dacee47b1, type: 3}
       propertyPath: m_Name
-      value: Player2_Bullet
+      value: Player3_Bullet
       objectReference: {fileID: 0}
     - target: {fileID: 7880507108404404341, guid: 037877a246b2195428b9579dacee47b1, type: 3}
       propertyPath: m_maxSpeed
@@ -27,6 +27,14 @@ PrefabInstance:
     - target: {fileID: 7880507108404404341, guid: 037877a246b2195428b9579dacee47b1, type: 3}
       propertyPath: m_projectileDamage
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979945657785206523, guid: 037877a246b2195428b9579dacee47b1, type: 3}
+      propertyPath: m_Size.x
+      value: 7.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979945657785206523, guid: 037877a246b2195428b9579dacee47b1, type: 3}
+      propertyPath: m_Size.y
+      value: 7.062049
       objectReference: {fileID: 0}
     - target: {fileID: 7979945657785206523, guid: 037877a246b2195428b9579dacee47b1, type: 3}
       propertyPath: m_Sprite

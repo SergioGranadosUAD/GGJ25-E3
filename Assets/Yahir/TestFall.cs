@@ -19,6 +19,19 @@ public class TestFall : MonoBehaviour
         if (collision != null)
         {
             GameObject gameObject = collision.gameObject;
+            PlayerScript playerScript = gameObject.GetComponent<PlayerScript>();
+            if (playerScript == null )
+            {
+                return;
+            }
+            if (playerScript.LastPlayerID >= 0 )
+            {
+                GameManager.Instance.addPoints(playerScript.LastPlayerID + 1);
+            }
+            else
+            {
+                GameManager.Instance.substractPoints(playerScript.PlayerInput.playerIndex + 1);
+            }
             GameManager.Instance.setPlayerPosition(gameObject);
         }
     }

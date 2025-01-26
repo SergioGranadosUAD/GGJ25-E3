@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEditor.UI;
+using UnityEngine.InputSystem.Controls;
 
 public class ManagerSelection : MonoBehaviour
 {
@@ -20,13 +22,18 @@ public class ManagerSelection : MonoBehaviour
     bool m_player3 = false;
     bool m_player4 = false;
 
+    public Button myButton; // Arrastra tu botón desde el editor a este campo
 
-    int m_index = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         GameManager.Instance.playerInputManager.enabled = true;
         GameManager.Instance.playerInputManager.EnableJoining();
+
+        if (myButton != null)
+        {
+            myButton.interactable = false; // Esto desactiva el botón
+        }
     }
 
     // Update is called once per frame
@@ -65,6 +72,7 @@ public class ManagerSelection : MonoBehaviour
                 //setAlphaImage(imageComponent);
 
                 activeImagePlayer(1);
+                myButton.interactable = true;
             }
             else if (m_player3 == false && GameManager.Instance.getSizeListPlayers() == 3)
             {
@@ -122,8 +130,27 @@ public class ManagerSelection : MonoBehaviour
         }
     }
 
-    public void LoadSceneByName(string sceneName)
+    public void LoadSceneByName()
     {
-        SceneManager.LoadScene(sceneName);
+        int rand = Random.Range(1, 5);
+
+        switch (rand)
+        {
+            case 1:
+                SceneManager.LoadScene("Level 1_Layout");
+                break;
+            case 2:
+                SceneManager.LoadScene("Level 2_Layout");
+                break;
+            case 3:
+                SceneManager.LoadScene("Level 3_Layout");
+                break;
+            case 4:
+                SceneManager.LoadScene("Level 4_Layout");
+                break;
+            default:
+                Debug.LogWarning("Número inesperado (esto no debería ocurrir).");
+                break;
+        }
     }
 }

@@ -1,7 +1,7 @@
 using UnityEngine.UI;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class ButtonAlpha : MonoBehaviour
 {
     bool m_buttonHit;
     Image m_image;

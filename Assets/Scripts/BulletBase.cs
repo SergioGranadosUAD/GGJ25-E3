@@ -99,9 +99,9 @@ public class BulletBase : MonoBehaviour
       PlayerScript playerScript = gameObjectTrigger.GetComponent<PlayerScript>();
       if(playerScript != null)
       {
-        if(playerScript.playerInput.playerIndex != OwningPlayerID)
+        if(playerScript.PlayerInput.playerIndex != OwningPlayerID)
         {
-          playerScript.damagePlayer(m_direction, m_projectileDamage, m_projectilePushForce);
+          playerScript.damagePlayer(m_direction, m_projectileDamage, m_projectilePushForce, m_owningPlayerID);
         }
         else
         {
