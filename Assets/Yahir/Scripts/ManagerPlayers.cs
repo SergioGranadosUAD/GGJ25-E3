@@ -8,6 +8,8 @@ using UnityEngine.UIElements;
 public class ManagerPlayers : MonoBehaviour
 {
     [SerializeField]
+    AudioClip m_audio;
+    [SerializeField]
     private GameObject _GameObject;
     [SerializeField]
     private GameObject _GameObject1;
@@ -51,6 +53,8 @@ public class ManagerPlayers : MonoBehaviour
         {
             m_player4.gameObject.SetActive(false);
         }
+
+        AudioManager.Instance.PlayMusic(m_audio);
     }
 
     // Update is called once per frame

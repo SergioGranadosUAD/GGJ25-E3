@@ -997,10 +997,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a555e516c4306e24fb7d7a2a7e9d430e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _GameObject: {fileID: 477072901}
-  _GameObject1: {fileID: 772441024}
-  _GameObject2: {fileID: 1001203567}
-  _GameObject3: {fileID: 327265836}
+  m_audio: {fileID: 8300000, guid: 64268dfe7cd4f8c4ebfe1d3bbaa58087, type: 3}
+  _GameObject: {fileID: 7503942817861858373, guid: bceccfb14757d394a9573f6f9feb7755, type: 3}
+  _GameObject1: {fileID: 4011479125886257138, guid: 02eb4646036428f4e9cb480609dc9c13, type: 3}
+  _GameObject2: {fileID: 7503942817861858373, guid: 3f0ce55db50ffec4c9a385a34ee3b504, type: 3}
+  _GameObject3: {fileID: 7338010936633151525, guid: 4c9182a0add44f840ae5808103eb4b57, type: 3}
   m_player1: {fileID: 477072901}
   m_player2: {fileID: 772441024}
   m_player3: {fileID: 1001203567}

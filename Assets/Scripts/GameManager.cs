@@ -30,7 +30,8 @@ public struct PlayerInputData
 
 public class GameManager : MonoBehaviour
 {
-
+    [SerializeField]
+    AudioClip m_audio;
 
     public PlayerInput originalPlayerInput;
     public PlayerInput newPlayerInput;
@@ -88,6 +89,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         playerInputManager = GetComponent<PlayerInputManager>();
         if (playerInputManager == null) { return; }
+    }
+
+    private void Start()
+    {
+        AudioManager.Instance.PlayMusic(m_audio);
     }
 
     private void OnEnable()
