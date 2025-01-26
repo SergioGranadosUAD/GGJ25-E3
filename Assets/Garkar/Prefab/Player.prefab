@@ -118,7 +118,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.13378248, y: 0.13885295, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.45553, y: 0.45553, z: 0.45553}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4562791307999286372}
@@ -255,15 +255,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 3
   m_trappedSpeed: 1
-  m_jumpHeight: 300
-  m_armDistance: 1.5
-  m_airSpeedMultiplier: 5
+  m_jumpHeight: 200
+  m_armDistance: 0.7
+  m_airSpeedMultiplier: 3
   m_maxResistance: 100
-  m_shotCooldown: 1
-  m_trappedTime: 5
-  m_trappedGravityScale: 0.01
-  m_resistanceRegenTime: 5
-  m_trappedIFrameTime: 4
+  m_shotCooldown: 0.4
+  m_trappedTime: 4
+  m_trappedGravityScale: -0.01
+  m_resistanceRegenTime: 4
+  m_trappedIFrameTime: 2
   m_timeToStartRegenWhenShot: 3
   m_projectileGO: {fileID: 347499150317546348, guid: 037877a246b2195428b9579dacee47b1, type: 3}
 --- !u!50 &4553932820340259386
