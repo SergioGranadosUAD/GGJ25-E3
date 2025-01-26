@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(PlayerInput))]
+//[RequireComponent(typeof(PlayerInput))]
 public class PlayerScript : MonoBehaviour
 {
   //Components
@@ -107,7 +107,13 @@ public class PlayerScript : MonoBehaviour
   private PowerupType m_currentPowerup = PowerupType.None;
   private GameObject m_currentProjectileGO;
 
+    public PlayerInput m_currentPlayerInput;
 
+    InputAction m_moveAction;
+    InputAction m_aimAction;
+    InputAction m_jumpAction;
+    InputAction m_shootAtion;
+    InputAction m_especialAction;
   // Start is called once before the first execution of Update after the MonoBehaviour is created
   void Start()
   {
@@ -115,7 +121,30 @@ public class PlayerScript : MonoBehaviour
     m_armGO.transform.position = transform.position + transform.right * m_armDistance;
     m_currentResistance = m_maxResistance;
     m_currentProjectileGO = m_defaultProjectileGO;
+        if (PlayerInput)
+        {
+            SetPlayernput(PlayerInput);
+        }
+
   }
+
+    public void SetPlayernput(PlayerInput pi)
+    {
+        m_playerInput = pi;
+
+        m_moveAction = m_playerInput.actions.FindAction("Movement");
+        m_aimAction = m_playerInput.actions.FindAction("Aim");
+        m_jumpAction = m_playerInput.actions.FindAction("Jump");
+        m_shootAtion = m_playerInput.actions.FindAction("Shoot");
+        m_especialAction = m_playerInput.actions.FindAction("Special");
+        //m_playerInput.actions.FindAction("Movement").canceled += OnMove;
+        //m_playerInput.actions.FindAction("Aim").performed += OnAimAct;
+        //m_playerInput.actions.FindAction("Aim").canceled += OnAimAct;
+        //m_playerInput.actions.FindAction("Jump").performed += OnJumpAct;
+        //m_playerInput.actions.FindAction("Shoot").performed += OnShootAct;
+        //m_playerInput.actions.FindAction("Shoot").canceled += OnShootAct;
+        //m_playerInput.actions.FindAction("Special").canceled += OnSpecialAct;
+    }
 
   // Update is called once per frame
   void Update()
@@ -124,11 +153,24 @@ public class PlayerScript : MonoBehaviour
     checkIfCanShoot();
     checkIfCanRegen();
     checkGrounded();
+        OnMovement(m_moveAction.ReadValue<Vector2>());
+        OnAim(m_aimAction.ReadValue<Vector2>());
+        if (m_jumpAction.WasPerformedThisFrame())
+        {
+            OnJump();
+        }
+        m_isShooting = m_shootAtion.IsPressed();
   }
-
-  private void OnMovement(InputValue value)
+    private void OnMove(InputAction.CallbackContext context)
+    {
+        if (context.performed) 
+        {
+            OnMovement(context.ReadValue<Vector2>());
+        }
+    }
+        private void OnMovement(Vector2 value)
   {
-    Vector2 inputDir = value.Get<Vector2>();
+    Vector2 inputDir = value.normalized;
     if (!m_isTrapped)
     {
       if(m_isGrounded)
@@ -153,16 +195,30 @@ public class PlayerScript : MonoBehaviour
     }
   }
 
-  private void OnAim(InputValue value)
-  {
-    if (value.Get<Vector2>().magnitude >= 0.5f)
+    private void OnAimAct(InputAction.CallbackContext context)
     {
-      m_aimDir = value.Get<Vector2>().normalized;
+        if (context.performed)
+        {
+            OnAim(context.ReadValue<Vector2>());
+        }
+    }
+
+    private void OnAim(Vector2 value)
+  {
+    if (value.magnitude >= 0.5f)
+    {
+      m_aimDir = value.normalized;
     }
     m_armGO.transform.position = new Vector2(transform.position.x, transform.position.y) + m_aimDir * m_armDistance;
   }
-
-  private void OnJump(InputValue value)
+    private void OnJumpAct(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            OnJump();
+        }
+    }
+    private void OnJump()
   {
     if(m_isTrapped)
     {
@@ -181,20 +237,32 @@ public class PlayerScript : MonoBehaviour
       m_hasDoubleJumped = true;
     }
   }
-
-  private void OnShoot(InputValue value)
+    private void OnShootAct(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            OnShoot();
+        }
+    }
+    private void OnShoot()
   {
-    if (value.Get<float>() > 0.5f)
-    {
       m_isShooting = true;
-    }
-    else
-    {
-      m_isShooting = false;
-    }
+    //if (value > 0.5f)
+    //{
+    //}
+    //else
+    //{
+    //  m_isShooting = false;
+    //}
   }
-
-  private void OnSpecial(InputValue value)
+    private void OnSpecialAct(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            //OnSpecial(context.ReadValue<float>());
+        }
+    }
+    private void OnSpecial(InputValue value)
   {
 
   }

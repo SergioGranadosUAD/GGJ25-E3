@@ -6,6 +6,20 @@ using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
+public struct PlayerInputData
+{
+    public string defaultControlScheme;
+    public string defaultActionMap;
+    public InputActionAsset actions;
+
+    public PlayerInputData(PlayerInput playerInput)
+    {
+        defaultControlScheme = playerInput.defaultControlScheme;
+        defaultActionMap = playerInput.defaultActionMap;
+        actions = playerInput.actions;
+    }
+}
+
 public class GameManager : MonoBehaviour
 {
     struct PlayerData
@@ -15,6 +29,27 @@ public class GameManager : MonoBehaviour
         public int Score;
         public int playerID;
     }
+
+    public PlayerInput originalPlayerInput;
+    public PlayerInput newPlayerInput;
+    public List<PlayerInputData> data = new List<PlayerInputData>();
+    //public void saveData()
+    //{
+    //    PlayerInputData playerControl;
+    //    // Disable the original PlayerInput
+    //    originalPlayerInput.enabled = false;
+
+    //    // Transfer input actions
+    //    newPlayerInput.actions = originalPlayerInput.actions;
+
+    //    // Transfer control scheme and devices
+    //    newPlayerInput.defaultControlScheme = originalPlayerInput.defaultControlScheme;
+    //    newPlayerInput.defaultActionMap = originalPlayerInput.defaultActionMap;
+    //    newPlayerInput.SwitchCurrentControlScheme(originalPlayerInput.defaultControlScheme);
+
+    //    // Enable the new PlayerInput
+    //    newPlayerInput.enabled = true;
+    //}
 
     public static GameManager Instance { get; private set; }
 
@@ -36,6 +71,8 @@ public class GameManager : MonoBehaviour
 
     public bool selectionPlayerInputActive = false;
 
+    public List<PlayerInput> m_playersInstance = new List<PlayerInput>();
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -53,6 +90,7 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
+        playerInputManager.onPlayerJoined += OnPlayerJoined;
         playerInputManager.enabled = false;
 
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -107,15 +145,12 @@ public class GameManager : MonoBehaviour
 
     private void OnPlayerJoined(PlayerInput playerInput)
     {
+        m_playersInstance.Add(playerInput);
+        PlayerInputData playerControl = new PlayerInputData(playerInput);
         GameObject playerGameObject = playerInput.gameObject;
+        playerGameObject.transform.parent = transform;
         addNewPlayer(playerGameObject);
-
-        setPlayerPosition(playerGameObject);
-    }
-
-    private void OnPlayerLeft(PlayerInput playerInput)
-    {
-
+        //setPlayerPosition(playerGameObject);
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -151,4 +186,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public int getSizeListPlayers()
+    {
+        return m_playerList.Count;
+    }
+
+    public void SetPlayableObject(GameObject newPlayerPrefab, int i)
+    {
+        GameObject newPlayer = Instantiate(newPlayerPrefab);
+        newPlayer.GetComponent<PlayerScript>().SetPlayernput (m_playersInstance[i]);
+        //newPlayer.transform.position = m_playersInstance[i].transform.position;
+
+        // Asignar el PlayerInput al nuevo jugador
+        //newPlayer.transform;
+        //m_playersInstance[i].transform.SetParent(newPlayer.transform);
+        setPlayerPosition(newPlayer);
+
+        // Otras configuraciones si es necesario
+    }
 }
