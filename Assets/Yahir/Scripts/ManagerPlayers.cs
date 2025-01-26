@@ -4,8 +4,9 @@ using UnityEngine.InputSystem;
 public class ManagerPlayers : MonoBehaviour
 {
     [SerializeField]
-    private GameObject GameObject;
+    private GameObject _GameObject;
 
+    public static ManagerPlayers Instance { get; private set; }
 
     bool instanceObject = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -17,6 +18,13 @@ public class ManagerPlayers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
         if (instanceObject)
         {
             instancePlayers();
@@ -37,7 +45,7 @@ public class ManagerPlayers : MonoBehaviour
     {
         for (int i = 0; i < GameManager.Instance.getSizeListPlayers(); i++)
         {
-            GameManager.Instance.SetPlayableObject(gameObject, i);
+            GameManager.Instance.SetPlayableObject(_GameObject, i);
         }
     }
 }

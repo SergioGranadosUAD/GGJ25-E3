@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 460676243}
   - component: {fileID: 460676245}
   - component: {fileID: 460676244}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 505246945}
   - component: {fileID: 505246947}
   - component: {fileID: 505246946}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1006,7 +1006,7 @@ GameObject:
   - component: {fileID: 1554115268}
   - component: {fileID: 1554115270}
   - component: {fileID: 1554115269}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,7 +1158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a555e516c4306e24fb7d7a2a7e9d430e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameObject: {fileID: 7503942817861858373, guid: d0c429bcdcac6e448b99243fa5267e36, type: 3}
+  _GameObject: {fileID: 7503942817861858373, guid: d0c429bcdcac6e448b99243fa5267e36, type: 3}
 --- !u!4 &1564111205
 Transform:
   m_ObjectHideFlags: 0
