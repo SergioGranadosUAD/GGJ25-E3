@@ -85,6 +85,7 @@ public class PlayerScript : MonoBehaviour
   private bool m_isTrapped = false;
   private bool m_canShoot = true;
   private bool m_canBeTrapped = true;
+  private bool m_isShooting = false;
   private GameObject m_armGO;
 
   // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -98,6 +99,7 @@ public class PlayerScript : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    checkIfCanShoot();
     checkIfCanRegen();
     checkGrounded();
   }
@@ -154,19 +156,13 @@ public class PlayerScript : MonoBehaviour
 
   private void OnShoot(InputValue value)
   {
-    if(m_isTrapped || !m_canShoot)
+    if (value.Get<float>() > 0.5f)
     {
-      return;
+      m_isShooting = true;
     }
-
-    GameObject projectile = Instantiate(m_projectileGO, m_armGO.transform.position, Quaternion.identity) as GameObject;
-    if (projectile != null)
+    else
     {
-      BulletBase bulletComp = projectile.GetComponent<BulletBase>();
-      bulletComp.Direction = m_aimDir;
-      bulletComp.OwningPlayerID = PlayerInput.playerIndex;
-
-      StartCoroutine(startShotCooldownTimer());
+      m_isShooting = false;
     }
   }
 
@@ -197,6 +193,24 @@ public class PlayerScript : MonoBehaviour
   private void respawnPlayer()
   {
 
+  }
+
+  private void checkIfCanShoot()
+  {
+    if (m_isTrapped || !m_canShoot || !m_isShooting)
+    {
+      return;
+    }
+
+    GameObject projectile = Instantiate(m_projectileGO, m_armGO.transform.position, Quaternion.identity) as GameObject;
+    if (projectile != null)
+    {
+      BulletBase bulletComp = projectile.GetComponent<BulletBase>();
+      bulletComp.Direction = m_aimDir;
+      bulletComp.OwningPlayerID = PlayerInput.playerIndex;
+
+      StartCoroutine(startShotCooldownTimer());
+    }
   }
 
   private void checkIfCanRegen()

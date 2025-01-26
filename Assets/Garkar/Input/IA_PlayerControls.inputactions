@@ -38,8 +38,8 @@
                     "id": "043bb31d-8602-4022-9ba6-9f12c933d9c5",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Special",
