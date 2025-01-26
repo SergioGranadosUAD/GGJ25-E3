@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1098179606456428539, guid: de3b20d822c507d4abc7a5f4d3984f7a, type: 3}
+  m_Sprite: {fileID: -2726530927984078627, guid: 3b5c2a6347370ca42a497b9e65518ddc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4.8799996, y: 5.601626}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -207,16 +207,7 @@ MonoBehaviour:
   m_trappedTimeReductionValue: 0.1
   m_trappedBounceMultiplier: 0.3
   m_defaultProjectileGO: {fileID: 6787514642789969296, guid: 8283a9636ff0e6848ab1bfd4da9f5dc5, type: 3}
-  m_playerAnimationSets:
-  - {fileID: 9100000, guid: 138fa234f187c0c4e81f757945fb50f5, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  m_weaponTextures:
-  - {fileID: 1098179606456428539, guid: de3b20d822c507d4abc7a5f4d3984f7a, type: 3}
-  - {fileID: -5557420877203330147, guid: de3b20d822c507d4abc7a5f4d3984f7a, type: 3}
-  - {fileID: -7888296697152109952, guid: de3b20d822c507d4abc7a5f4d3984f7a, type: 3}
-  - {fileID: 698664279297640794, guid: de3b20d822c507d4abc7a5f4d3984f7a, type: 3}
+  m_limitTimeEnemy: 5
   m_currentPlayerInput: {fileID: 0}
 --- !u!50 &4553932820340259386
 Rigidbody2D:
