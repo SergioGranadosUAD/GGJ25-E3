@@ -1917,6 +1917,10 @@ PrefabInstance:
       propertyPath: m_PlayerPrefab
       value: 
       objectReference: {fileID: 4875387883574850032, guid: f2d0447516c7e874abada872ed98e00d, type: 3}
+    - target: {fileID: 5773162893521782275, guid: 8326f849619c9fb43998862aa865e301, type: 3}
+      propertyPath: m_audio
+      value: 
+      objectReference: {fileID: 8300000, guid: 7592430052ff4d0408a800c31f87ad73, type: 3}
     - target: {fileID: 6509964383520938120, guid: 8326f849619c9fb43998862aa865e301, type: 3}
       propertyPath: m_Name
       value: Manager
