@@ -46,8 +46,9 @@ public class ManagerSelection : MonoBehaviour
                 Image imageComponent = m_listImageBackGround[0];
 
                 Color color = new Color(0.886f, 0.317f, 0.529f, 0.5f);
-                
-                setAlphaImage(imageComponent);
+
+                imageComponent.color = color;
+                //setAlphaImage(imageComponent);
 
                 activeImagePlayer(0);
 
@@ -60,7 +61,8 @@ public class ManagerSelection : MonoBehaviour
 
                 Color color = new Color(0.278f, 0.647f, 0.843f, 0.5f);
 
-                setAlphaImage(imageComponent);
+                imageComponent.color = color;
+                //setAlphaImage(imageComponent);
 
                 activeImagePlayer(1);
             }
@@ -72,7 +74,8 @@ public class ManagerSelection : MonoBehaviour
 
                 Color color = new Color(0.725f, 0.945f, 0.561f, 0.5f);
 
-                setAlphaImage(imageComponent);
+                imageComponent.color = color;
+                //setAlphaImage(imageComponent);
 
                 activeImagePlayer(2);
             }
@@ -84,7 +87,8 @@ public class ManagerSelection : MonoBehaviour
 
                 Color color = new Color(0.698f, 0.133f, 0.647f, 0.5f);
 
-                setAlphaImage(imageComponent);
+                imageComponent.color = color;
+                //setAlphaImage(imageComponent);
 
                 activeImagePlayer(3);
             }
