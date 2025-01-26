@@ -25,7 +25,7 @@ public class PlayerScript : MonoBehaviour
   }
 
   private Rigidbody2D m_rigidbody2D;
-  public Rigidbody2D rigidbody
+  public Rigidbody2D rigidbody2DComp
   {
     get
     {
@@ -169,7 +169,7 @@ public class PlayerScript : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    m_currentVelocity = rigidbody.linearVelocity;
+    m_currentVelocity = rigidbody2DComp.linearVelocity;
     checkIfCanShoot();
     checkIfCanRegen();
     checkGrounded();
@@ -206,19 +206,19 @@ public class PlayerScript : MonoBehaviour
     {
       if (m_isGrounded)
       {
-        rigidbody.linearVelocityX = inputDir.x * m_speed;
+        rigidbody2DComp.linearVelocityX = inputDir.x * m_speed;
 
       }
       else
       {
-        rigidbody.AddForceX(inputDir.x * m_speed * m_airSpeedMultiplier);
+        rigidbody2DComp.AddForceX(inputDir.x * m_speed * m_airSpeedMultiplier);
       }
       //Clamp to max speed in X axis.
-      rigidbody.linearVelocityX = Mathf.Clamp(rigidbody.linearVelocityX, -m_speed, m_speed);
+      rigidbody2DComp.linearVelocityX = Mathf.Clamp(rigidbody2DComp.linearVelocityX, -m_speed, m_speed);
     }
     else
     {
-      rigidbody.AddForce(inputDir * m_trappedSpeed);
+      rigidbody2DComp.AddForce(inputDir * m_trappedSpeed);
       //if(Rigidbody.linearVelocity.magnitude > m_trappedSpeed)
       //{
       //  Rigidbody.linearVelocity = Rigidbody.linearVelocity.normalized * m_trappedSpeed;
@@ -261,12 +261,12 @@ public class PlayerScript : MonoBehaviour
 
     if (m_isGrounded)
     {
-      rigidbody.AddForceY(m_jumpHeight);
+      rigidbody2DComp.AddForceY(m_jumpHeight);
     }
     else if (!m_hasDoubleJumped)
     {
-      rigidbody.linearVelocityY = 0;
-      rigidbody.AddForceY(m_jumpHeight);
+      rigidbody2DComp.linearVelocityY = 0;
+      rigidbody2DComp.AddForceY(m_jumpHeight);
       m_hasDoubleJumped = true;
     }
   }
@@ -320,7 +320,7 @@ public class PlayerScript : MonoBehaviour
         trapPlayer();
       }
     }
-    rigidbody.linearVelocity = dir * pushForce;
+    rigidbody2DComp.linearVelocity = dir * pushForce;
     m_currentRegenTime = 0.0f;
   }
 
@@ -438,11 +438,11 @@ public class PlayerScript : MonoBehaviour
     {
       if (!m_isTrapped)
       {
-        rigidbody.linearVelocityX = 0;
+        rigidbody2DComp.linearVelocityX = 0;
       }
       else
       {
-        rigidbody.linearVelocity = Vector2.Reflect(m_currentVelocity * m_trappedBounceMultiplier, collision.contacts[0].normal);
+        rigidbody2DComp.linearVelocity = Vector2.Reflect(m_currentVelocity * m_trappedBounceMultiplier, collision.contacts[0].normal);
       }
     }
     else if (collision.transform.CompareTag("Player"))
@@ -452,7 +452,7 @@ public class PlayerScript : MonoBehaviour
       {
         if (enemyPlayer.IsTrapped)
         {
-          enemyPlayer.rigidbody.AddForce(rigidbody.linearVelocity.normalized * m_pushForce);
+          enemyPlayer.rigidbody2DComp.AddForce(rigidbody2DComp.linearVelocity.normalized * m_pushForce);
         }
       }
     }
@@ -472,8 +472,8 @@ public class PlayerScript : MonoBehaviour
 
   private IEnumerator startTrappedTimer()
   {
-    rigidbody.sharedMaterial.bounciness = 1.0f;
-    rigidbody.gravityScale = m_trappedGravityScale;
+    rigidbody2DComp.sharedMaterial.bounciness = 1.0f;
+    rigidbody2DComp.gravityScale = m_trappedGravityScale;
     m_isTrapped = true;
     m_currentTrappedTimer = 0;
     while (m_currentTrappedTimer < m_trappedTime)
@@ -481,8 +481,8 @@ public class PlayerScript : MonoBehaviour
       m_currentTrappedTimer += Time.deltaTime;
       yield return null;
     }
-    rigidbody.sharedMaterial.bounciness = 0.0f;
-    rigidbody.gravityScale = 1.0f;
+    rigidbody2DComp.sharedMaterial.bounciness = 0.0f;
+    rigidbody2DComp.gravityScale = 1.0f;
     m_isTrapped = false;
     m_currentResistance = m_maxResistance;
     animator.SetBool("isTrapped", false);
