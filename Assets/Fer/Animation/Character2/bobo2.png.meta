@@ -1,0 +1,1046 @@
+fileFormatVersion: 2
+guid: 303875280ec551c418a9253a630e0636
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2745117673488493886
+    second: bobo2_0
+  - first:
+      213: 3868089757472591523
+    second: bobo2_1
+  - first:
+      213: -3889872697194030243
+    second: bobo2_2
+  - first:
+      213: -5640794056321007036
+    second: bobo2_3
+  - first:
+      213: 9197473214826578851
+    second: bobo2_4
+  - first:
+      213: 8700679628448161180
+    second: bobo2_5
+  - first:
+      213: 5125845930546947934
+    second: bobo2_6
+  - first:
+      213: 2127240775899143312
+    second: bobo2_7
+  - first:
+      213: -7892593031939696268
+    second: bobo2_8
+  - first:
+      213: 3288105142014389136
+    second: bobo2_9
+  - first:
+      213: -5320957109273304890
+    second: bobo2_10
+  - first:
+      213: -3624251184016824308
+    second: bobo2_11
+  - first:
+      213: -3990800392989589470
+    second: bobo2_12
+  - first:
+      213: 1895741136037194725
+    second: bobo2_13
+  - first:
+      213: -1235656732096986457
+    second: bobo2_14
+  - first:
+      213: 260041167395848514
+    second: bobo2_15
+  - first:
+      213: 5271627153308312313
+    second: bobo2_16
+  - first:
+      213: -1068898939322948461
+    second: bobo2_17
+  - first:
+      213: 3844830189043775142
+    second: bobo2_18
+  - first:
+      213: -5224535907475615903
+    second: bobo2_19
+  - first:
+      213: 1386809744833447762
+    second: bobo2_20
+  - first:
+      213: -6388547896854451858
+    second: bobo2_21
+  - first:
+      213: -2656335097015581777
+    second: bobo2_22
+  - first:
+      213: 6042247701763287570
+    second: bobo2_23
+  - first:
+      213: -193831453590947974
+    second: bobo2_24
+  - first:
+      213: 5638726185635888818
+    second: bobo2_25
+  - first:
+      213: 2822196879467738112
+    second: bobo2_26
+  - first:
+      213: 8233343313079878930
+    second: bobo2_27
+  - first:
+      213: 6613537930334446098
+    second: bobo2_28
+  - first:
+      213: -3683381990335223162
+    second: bobo2_29
+  - first:
+      213: 1542791788658389237
+    second: bobo2_30
+  - first:
+      213: -2119407847870443715
+    second: bobo2_31
+  - first:
+      213: 4377421940567932287
+    second: bobo2_32
+  - first:
+      213: 8206176287437403105
+    second: bobo2_33
+  - first:
+      213: -3474341144166707081
+    second: bobo2_34
+  - first:
+      213: 8465332189132696990
+    second: bobo2_35
+  - first:
+      213: -6188902797970891751
+    second: bobo2_36
+  - first:
+      213: 8891928713136965566
+    second: bobo2_37
+  - first:
+      213: -4050410529409346492
+    second: bobo2_38
+  - first:
+      213: 7356348731168753488
+    second: bobo2_39
+  - first:
+      213: 7367694858392855180
+    second: bobo2_40
+  - first:
+      213: -7252272257227541711
+    second: bobo2_41
+  - first:
+      213: 5790985019921792292
+    second: bobo2_42
+  - first:
+      213: -12247962038699282
+    second: bobo2_43
+  - first:
+      213: -7042595061587635044
+    second: bobo2_44
+  - first:
+      213: 1893184759772054589
+    second: bobo2_45
+  - first:
+      213: 727667999540981339
+    second: bobo2_46
+  - first:
+      213: 3413970114898560899
+    second: bobo2_47
+  - first:
+      213: 7048346053420305927
+    second: bobo2_48
+  - first:
+      213: 5338293790249772653
+    second: bobo2_49
+  - first:
+      213: -878095020491710626
+    second: bobo2_50
+  - first:
+      213: 1442194694050911934
+    second: bobo2_51
+  - first:
+      213: 2025202937232808247
+    second: bobo2_52
+  - first:
+      213: -2274363823193290090
+    second: bobo2_53
+  - first:
+      213: 2346835921443720895
+    second: bobo2_54
+  - first:
+      213: -8674144237518850033
+    second: bobo2_55
+  - first:
+      213: -1097922430521123033
+    second: bobo2_56
+  - first:
+      213: -1308568281535250648
+    second: bobo2_57
+  - first:
+      213: -6703010165720381734
+    second: bobo2_58
+  - first:
+      213: 8889594939242474703
+    second: bobo2_59
+  - first:
+      213: 6252935183509069436
+    second: bobo2_60
+  - first:
+      213: -9041817020018387439
+    second: bobo2_61
+  - first:
+      213: -9113741056050083635
+    second: bobo2_62
+  - first:
+      213: -3023070933286291023
+    second: bobo2_63
+  - first:
+      213: -4557855669851524931
+    second: bobo2_64
+  - first:
+      213: 2224837207143952922
+    second: bobo2_65
+  - first:
+      213: 4362155380959075610
+    second: bobo2_66
+  - first:
+      213: 8707894126554140728
+    second: bobo2_67
+  - first:
+      213: 1612839312989678753
+    second: bobo2_68
+  - first:
+      213: 72841582386078751
+    second: bobo2_69
+  - first:
+      213: 7077901362812006280
+    second: bobo2_70
+  - first:
+      213: -7266215525434062846
+    second: bobo2_71
+  - first:
+      213: 9105592442627964021
+    second: bobo2_72
+  - first:
+      213: -626085599810619105
+    second: bobo2_73
+  - first:
+      213: 2393523502454663646
+    second: bobo2_74
+  - first:
+      213: 1503594825626254156
+    second: bobo2_75
+  - first:
+      213: 7303742873058732488
+    second: bobo2_76
+  - first:
+      213: -2842052498742626557
+    second: bobo2_77
+  - first:
+      213: 3146943182218898748
+    second: bobo2_78
+  - first:
+      213: 1159381867611391498
+    second: bobo2_79
+  - first:
+      213: 4649445625261241268
+    second: bobo2_80
+  - first:
+      213: 8826105310802598314
+    second: bobo2_81
+  - first:
+      213: -1738813185480655208
+    second: bobo2_82
+  - first:
+      213: -1720631114371396506
+    second: bobo2_83
+  - first:
+      213: -9024500371247480475
+    second: bobo2_84
+  - first:
+      213: -401002790760575379
+    second: bobo2_85
+  - first:
+      213: 101248410178514908
+    second: bobo2_86
+  - first:
+      213: 4214306270240042678
+    second: bobo2_87
+  - first:
+      213: -440741216764682875
+    second: bobo2_88
+  - first:
+      213: -555866593631912218
+    second: bobo2_89
+  - first:
+      213: -8539108566154071152
+    second: bobo2_90
+  - first:
+      213: -4712580470831403700
+    second: bobo2_91
+  - first:
+      213: -8918426262401302643
+    second: bobo2_92
+  - first:
+      213: 1808418668197246410
+    second: bobo2_93
+  - first:
+      213: -2833761951773489722
+    second: bobo2_94
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bobo2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533930ffb70b7df43b0803d98c606ecd
+      internalID: 1615617269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30951436a434681448f117dd9e8565ae
+      internalID: -2114899264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_2
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2ba37c7ce0b37469e993f432d28cfb
+      internalID: -1010587498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_3
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c85aac4107fe2b4ab16482447284402
+      internalID: -1747978768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_4
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfdbc0a9213a0d43af741319983fff7
+      internalID: -1018274336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_5
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c9446bfba93fb4a9d4353871df9eca
+      internalID: -208795646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_6
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 720
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c355e256eca7847860b8566de08cb6
+      internalID: -1842826071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68ee10418d11f84db6fc1b1a910296c
+      internalID: 726274948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9e4c223d230b4469ed21c8ff3a7262
+      internalID: 902786024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_9
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a453538fcc2d44cbe0d88c546008c5
+      internalID: -1896233179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_10
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7929cb0ca53ed6479c85b55f0baccce
+      internalID: -1853161989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_11
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215ef812bdcf4f94fa241e636a90514e
+      internalID: 1807203724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_12
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014591fd31ad73945a0b4cc730ee59bd
+      internalID: 360638169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_13
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 480
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6d03ea47f5217489d62866c2ed071f
+      internalID: 1787299522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fd5213b2ceae748ad02963ba1f83ff
+      internalID: -1794157646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57404f8202523d843ad86e149e29a15c
+      internalID: -1190709553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_16
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 240
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48e6409edbe66944959ec4fd6e984ad
+      internalID: -1362272677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_17
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 240
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f210c6b7e43caa04b833f2b9bc3e58a3
+      internalID: 592515601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_18
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 240
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe52a7ea703bb94594c6cde78477054
+      internalID: 568744614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_19
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 240
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59ff7c3f57b5ec549a809c2d18a2d37f
+      internalID: -1425674344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_20
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 240
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159b210ae85518546992a70eed7781be
+      internalID: -1768333773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb96dc96b7b242f418a4f2cd698c9c89
+      internalID: -424108633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_22
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fbce5efde3c534b9bb88b8d83d5566
+      internalID: -971996037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_23
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518eaeee47ef7884bbb0b53e84e38715
+      internalID: 1992871578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_24
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ad5fa6cd2398341aaaf326b890d6c1
+      internalID: 344652796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_25
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1b02ea8ca93e74bbc0b3914859b2cc
+      internalID: 1037842155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_26
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2886136455ed242a13cb61757cc81a
+      internalID: 1315767396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bobo2_27
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 240
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fd8025aa094814b855e46933fd14c6
+      internalID: -325913621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0d668084db1c5d344b7cfcc37a6efae3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      bobo2_0: 1615617269
+      bobo2_1: -2114899264
+      bobo2_10: -1853161989
+      bobo2_11: 1807203724
+      bobo2_12: 360638169
+      bobo2_13: 1787299522
+      bobo2_14: -1794157646
+      bobo2_15: -1190709553
+      bobo2_16: -1362272677
+      bobo2_17: 592515601
+      bobo2_18: 568744614
+      bobo2_19: -1425674344
+      bobo2_2: -1010587498
+      bobo2_20: -1768333773
+      bobo2_21: -424108633
+      bobo2_22: -971996037
+      bobo2_23: 1992871578
+      bobo2_24: 344652796
+      bobo2_25: 1037842155
+      bobo2_26: 1315767396
+      bobo2_27: -325913621
+      bobo2_3: -1747978768
+      bobo2_4: -1018274336
+      bobo2_5: -208795646
+      bobo2_6: -1842826071
+      bobo2_7: 726274948
+      bobo2_8: 902786024
+      bobo2_9: -1896233179
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
