@@ -168,6 +168,8 @@ public class GameManager : MonoBehaviour
 
         if (obj == null) { return; }
 
+        m_spawnPoint.Clear();
+        
         foreach (Transform child in obj.transform)
         {
             m_spawnPoint.Add(child.gameObject.transform);
@@ -176,6 +178,8 @@ public class GameManager : MonoBehaviour
         GameObject objTime = GameObject.FindWithTag("Time");
 
         if (objTime == null) { return; }
+
+        m_timeActive = true;
 
         m_textMeshPro = objTime.GetComponentInChildren<TMP_Text>();
 
