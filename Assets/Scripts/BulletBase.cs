@@ -101,7 +101,7 @@ public class BulletBase : MonoBehaviour
       {
         if(playerScript.PlayerInput.playerIndex != OwningPlayerID)
         {
-          playerScript.damagePlayer(m_direction, m_projectileDamage, m_projectilePushForce);
+          playerScript.damagePlayer(m_direction, m_projectileDamage, m_projectilePushForce, m_owningPlayerID);
         }
         else
         {

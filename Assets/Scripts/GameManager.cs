@@ -20,15 +20,17 @@ public struct PlayerInputData
     }
 }
 
-public class GameManager : MonoBehaviour
-{
-    struct PlayerData
+    public class PlayerData
     {
         public GameObject player;
         public string playerName;
         public int Score;
         public int playerID;
     }
+
+public class GameManager : MonoBehaviour
+{
+
 
     public PlayerInput originalPlayerInput;
     public PlayerInput newPlayerInput;
@@ -203,5 +205,27 @@ public class GameManager : MonoBehaviour
         setPlayerPosition(newPlayer);
 
         // Otras configuraciones si es necesario
+    }
+
+    public void addPoints(int playerID)
+    {
+        for (int i = 0; i < m_playerList.Count; i++)
+        {
+            if (m_playerList[i].playerID == playerID)
+            {
+                m_playerList[i].Score += 1;
+            }
+        }
+    }
+
+    public void substractPoints(int playerID)
+    {
+        for (int i = 0; i < m_playerList.Count; i++)
+        {
+            if (m_playerList[i].playerID == playerID)
+            {
+                m_playerList[i].Score -= 1;
+            }
+        }
     }
 }

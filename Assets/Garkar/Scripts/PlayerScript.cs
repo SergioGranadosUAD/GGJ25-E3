@@ -88,6 +88,9 @@ public class PlayerScript : MonoBehaviour
   [SerializeField]
   private GameObject m_defaultProjectileGO;
 
+    public int LastPlayerID { get { return m_lastPlayerID; } }
+
+  private int m_lastPlayerID = 0;
   private float m_currentRegenTime = 0.0f;
   private float m_currentResistance = 0.0f;
   private float m_remainingPowerupDuration = 0.0f;
@@ -272,8 +275,9 @@ public class PlayerScript : MonoBehaviour
     m_remainingPowerupDuration = powerup.duration;
   }
 
-  public void damagePlayer(Vector2 dir, float damageAmount, float pushForce)
+  public void damagePlayer(Vector2 dir, float damageAmount, float pushForce, int index)
   {
+    m_lastPlayerID = index;
     if(!m_isTrapped && m_canBeTrapped)
     {
       m_currentResistance -= damageAmount;
