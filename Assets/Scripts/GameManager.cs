@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
         if (m_currentTime < 0.0f && m_timeActive != false)
         {
             m_timeActive = false;
+            SceneManager.LoadScene("ScoreFinal");
         }
     }
     public void addNewPlayer(GameObject player)
