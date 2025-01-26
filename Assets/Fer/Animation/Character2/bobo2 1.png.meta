@@ -1,289 +1,292 @@
 fileFormatVersion: 2
-guid: aaba32b8ba2f3fb41a8d50aebdc0f615
+guid: 1710d70adfd0a7c46af1314dfa534d41
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1520034544123849217
-    second: bobo1_0
+      213: -7035522988043518942
+    second: bobo2 1_0
   - first:
-      213: -3632190824504549961
-    second: bobo1_1
+      213: -3262015488894214269
+    second: bobo2 1_1
   - first:
-      213: -7380662349521455958
-    second: bobo1_2
+      213: -3920639209205718007
+    second: bobo2 1_2
   - first:
-      213: 6969208211541900408
-    second: bobo1_3
+      213: -6596704172968645955
+    second: bobo2 1_3
   - first:
-      213: -2261561860203361009
-    second: bobo1_4
+      213: 6903219220982404367
+    second: bobo2 1_4
   - first:
-      213: -4043942820046088315
-    second: bobo1_5
+      213: 8154071059181416127
+    second: bobo2 1_5
   - first:
-      213: -3152875335091905582
-    second: bobo1_6
+      213: 4478223850652483579
+    second: bobo2 1_6
   - first:
-      213: -5850922891985017365
-    second: bobo1_7
+      213: 6443887995835027445
+    second: bobo2 1_7
   - first:
-      213: -6543287283209855228
-    second: bobo1_8
+      213: -478646622279501513
+    second: bobo2 1_8
   - first:
-      213: 4706944607501688685
-    second: bobo1_9
+      213: 1535708938318742544
+    second: bobo2 1_9
   - first:
-      213: -3985384898984954341
-    second: bobo1_10
+      213: 3327636907058165878
+    second: bobo2 1_10
   - first:
-      213: 8456144276000448461
-    second: bobo1_11
+      213: -3930317361734257925
+    second: bobo2 1_11
   - first:
-      213: 2385142824621991226
-    second: bobo1_12
+      213: -5629430911568491146
+    second: bobo2 1_12
   - first:
-      213: -6641626791424043989
-    second: bobo1_13
+      213: -3617628994387608406
+    second: bobo2 1_13
   - first:
-      213: -2746627766974424065
-    second: bobo1_14
+      213: -7135117479403891787
+    second: bobo2 1_14
   - first:
-      213: -7441455223477654396
-    second: bobo1_15
+      213: -3434538348456111104
+    second: bobo2 1_15
   - first:
-      213: -7477240516966482605
-    second: bobo1_16
+      213: 3648076634649108942
+    second: bobo2 1_16
   - first:
-      213: -324591828085441753
-    second: bobo1_17
+      213: -1594859701410146571
+    second: bobo2 1_17
   - first:
-      213: 8403323325402274541
-    second: bobo1_18
+      213: -7395967056833149674
+    second: bobo2 1_18
   - first:
-      213: 1035270438572740395
-    second: bobo1_19
+      213: 2207206915173018126
+    second: bobo2 1_19
   - first:
-      213: 1567234900837304715
-    second: bobo1_20
+      213: -3817957299344257546
+    second: bobo2 1_20
   - first:
-      213: -5619548773049834978
-    second: bobo1_21
+      213: 6302313050259523756
+    second: bobo2 1_21
   - first:
-      213: -6803190187246617788
-    second: bobo1_22
+      213: -5124175190388949882
+    second: bobo2 1_22
   - first:
-      213: -3942790610819481563
-    second: bobo1_23
+      213: -8402305365121248564
+    second: bobo2 1_23
   - first:
-      213: -4541438347343856550
-    second: bobo1_24
+      213: -179484247797850548
+    second: bobo2 1_24
   - first:
-      213: -2072396394382499622
-    second: bobo1_25
+      213: -212847626293222746
+    second: bobo2 1_25
   - first:
-      213: -8580343632109910138
-    second: bobo1_26
+      213: -6816756146747311669
+    second: bobo2 1_26
   - first:
-      213: -2536077694471914974
-    second: bobo1_27
+      213: 723062554787654453
+    second: bobo2 1_27
   - first:
-      213: 1877773352237458496
-    second: bobo1_28
+      213: 3498314056549465284
+    second: bobo2 1_28
   - first:
-      213: 4314405051861114856
-    second: bobo1_29
+      213: 5040527280832378170
+    second: bobo2 1_29
   - first:
-      213: 3169283966438351552
-    second: bobo1_30
+      213: -705530583627323622
+    second: bobo2 1_30
   - first:
-      213: -4433902939918717580
-    second: bobo1_31
+      213: -2565641343680362686
+    second: bobo2 1_31
   - first:
-      213: -6496784783688837849
-    second: bobo1_32
+      213: -2204044367934231343
+    second: bobo2 1_32
   - first:
-      213: 4939656830283149980
-    second: bobo1_33
+      213: -6810514001803241741
+    second: bobo2 1_33
   - first:
-      213: -8423772623028506342
-    second: bobo1_34
+      213: -2224169430296867103
+    second: bobo2 1_34
   - first:
-      213: 1858167017011451695
-    second: bobo1_35
+      213: 3195400063109042966
+    second: bobo2 1_35
   - first:
-      213: -161629814135550760
-    second: bobo1_36
+      213: -1331701538404152540
+    second: bobo2 1_36
   - first:
-      213: -7325232072266011923
-    second: bobo1_37
+      213: -1574916026619450718
+    second: bobo2 1_37
   - first:
-      213: 7463524596691844699
-    second: bobo1_38
+      213: 6143302217190805932
+    second: bobo2 1_38
   - first:
-      213: 3838312250197363483
-    second: bobo1_39
+      213: -4142745882302789566
+    second: bobo2 1_39
   - first:
-      213: -777866835173142888
-    second: bobo1_40
+      213: -6127122582150253541
+    second: bobo2 1_40
   - first:
-      213: -1032875413801739150
-    second: bobo1_41
+      213: 2066070924502226554
+    second: bobo2 1_41
   - first:
-      213: -6371414739149206785
-    second: bobo1_42
+      213: -7828870561472116255
+    second: bobo2 1_42
   - first:
-      213: -8112986135028740271
-    second: bobo1_43
+      213: -7055033979533087307
+    second: bobo2 1_43
   - first:
-      213: 8305382674698471813
-    second: bobo1_44
+      213: 4199392319470726550
+    second: bobo2 1_44
   - first:
-      213: -4843079169929674373
-    second: bobo1_45
+      213: -2072957278409937415
+    second: bobo2 1_45
   - first:
-      213: -220269923338355350
-    second: bobo1_46
+      213: -6291692026859820031
+    second: bobo2 1_46
   - first:
-      213: -7278976133535935276
-    second: bobo1_47
+      213: 8868278755471691015
+    second: bobo2 1_47
   - first:
-      213: -9053942122082052298
-    second: bobo1_48
+      213: 6559286764059181061
+    second: bobo2 1_48
   - first:
-      213: 7810535305263658735
-    second: bobo1_49
+      213: 7436352041242645223
+    second: bobo2 1_49
   - first:
-      213: 5908784309737459233
-    second: bobo1_50
+      213: 2929758429817402223
+    second: bobo2 1_50
   - first:
-      213: -3923702751979453956
-    second: bobo1_51
+      213: -9925566558283247
+    second: bobo2 1_51
   - first:
-      213: 1992054575122526318
-    second: bobo1_52
+      213: 8832622422616047580
+    second: bobo2 1_52
   - first:
-      213: -7732862141777686852
-    second: bobo1_53
+      213: 8319542337092845969
+    second: bobo2 1_53
   - first:
-      213: 7041697977319018435
-    second: bobo1_54
+      213: 4601494390026504637
+    second: bobo2 1_54
   - first:
-      213: -3625302549968247938
-    second: bobo1_55
+      213: 1374383080305516857
+    second: bobo2 1_55
   - first:
-      213: -4941193814760285212
-    second: bobo1_56
+      213: 322962084041331528
+    second: bobo2 1_56
   - first:
-      213: 7410902895869043874
-    second: bobo1_57
+      213: 4963430413601582760
+    second: bobo2 1_57
   - first:
-      213: -1290487273970274187
-    second: bobo1_58
+      213: -7838372823779065189
+    second: bobo2 1_58
   - first:
-      213: 8047488279568898121
-    second: bobo1_59
+      213: 3002026167990674135
+    second: bobo2 1_59
   - first:
-      213: 3912410733873003153
-    second: bobo1_60
+      213: -6876615421519252849
+    second: bobo2 1_60
   - first:
-      213: -5359802523861844123
-    second: bobo1_61
+      213: -4246694256871078401
+    second: bobo2 1_61
   - first:
-      213: 6409266650485445780
-    second: bobo1_62
+      213: -9162711479967731277
+    second: bobo2 1_62
   - first:
-      213: -7605173324608843648
-    second: bobo1_63
+      213: -6022172523260172123
+    second: bobo2 1_63
   - first:
-      213: -949323856951161007
-    second: bobo1_64
+      213: 3722729128832562789
+    second: bobo2 1_64
   - first:
-      213: -4509426527255476416
-    second: bobo1_65
+      213: -6116180485797075970
+    second: bobo2 1_65
   - first:
-      213: -5946648709320805201
-    second: bobo1_66
+      213: 1865129171314597406
+    second: bobo2 1_66
   - first:
-      213: 4946780317388551916
-    second: bobo1_67
+      213: 278585999136515850
+    second: bobo2 1_67
   - first:
-      213: -4844608701563890125
-    second: bobo1_68
+      213: -5574604200605937955
+    second: bobo2 1_68
   - first:
-      213: 8693787571682422098
-    second: bobo1_69
+      213: 1556799318044315273
+    second: bobo2 1_69
   - first:
-      213: -1942424390152334397
-    second: bobo1_70
+      213: 7186281627907642332
+    second: bobo2 1_70
   - first:
-      213: -5755891050027722155
-    second: bobo1_71
+      213: 2601453143941265125
+    second: bobo2 1_71
   - first:
-      213: 3993011152991051237
-    second: bobo1_72
+      213: -101126221491099459
+    second: bobo2 1_72
   - first:
-      213: 4313424310218069467
-    second: bobo1_73
+      213: 4430109765399440251
+    second: bobo2 1_73
   - first:
-      213: -2113071277802375388
-    second: bobo1_74
+      213: -4882109659680880829
+    second: bobo2 1_74
   - first:
-      213: -4109901454440995903
-    second: bobo1_75
+      213: 5391739962755501312
+    second: bobo2 1_75
   - first:
-      213: -8007868591157986680
-    second: bobo1_76
+      213: -1849898173821423053
+    second: bobo2 1_76
   - first:
-      213: -8938098430086964420
-    second: bobo1_77
+      213: 9153226763404739830
+    second: bobo2 1_77
   - first:
-      213: 2160039597665709276
-    second: bobo1_78
+      213: 7734966517442834485
+    second: bobo2 1_78
   - first:
-      213: 3070917245852755602
-    second: bobo1_79
+      213: -5553717535340150973
+    second: bobo2 1_79
   - first:
-      213: 940543092120633643
-    second: bobo1_80
+      213: -8538929360695074213
+    second: bobo2 1_80
   - first:
-      213: 5567785174794074360
-    second: bobo1_81
+      213: -8604931992038725727
+    second: bobo2 1_81
   - first:
-      213: 2497457965782801783
-    second: bobo1_82
+      213: 6620482998358522228
+    second: bobo2 1_82
   - first:
-      213: 8826176762349893307
-    second: bobo1_83
+      213: -7667496173526664624
+    second: bobo2 1_83
   - first:
-      213: 4564871738075885975
-    second: bobo1_84
+      213: 2954019416628301144
+    second: bobo2 1_84
   - first:
-      213: -5203221875031784003
-    second: bobo1_85
+      213: 813402041933739624
+    second: bobo2 1_85
   - first:
-      213: -2613071379703256713
-    second: bobo1_86
+      213: 4000621775837134248
+    second: bobo2 1_86
   - first:
-      213: 3981155512053116713
-    second: bobo1_87
+      213: -9005902114799072431
+    second: bobo2 1_87
   - first:
-      213: -4970683359236279603
-    second: bobo1_88
+      213: -7908213342774914182
+    second: bobo2 1_88
   - first:
-      213: -2015143302526684384
-    second: bobo1_89
+      213: -7280108036004005133
+    second: bobo2 1_89
   - first:
-      213: -536847695868344836
-    second: bobo1_90
+      213: -9148939348592674876
+    second: bobo2 1_90
   - first:
-      213: 2681045909721924552
-    second: bobo1_91
+      213: 7956597147070786840
+    second: bobo2 1_91
   - first:
-      213: -1035293591667576152
-    second: bobo1_92
+      213: -170309464271611875
+    second: bobo2 1_92
   - first:
-      213: -7651462894114409050
-    second: bobo1_93
+      213: -8334890342381368935
+    second: bobo2 1_93
+  - first:
+      213: 9088830930368214153
+    second: bobo2 1_94
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -316,7 +319,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -330,7 +333,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -354,7 +357,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -379,7 +382,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bobo1_0
+      name: bobo2 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -394,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe1fba1e8c290a040ade36c9b5c6bf50
-      internalID: 1269456344
+      spriteID: 9b2e4ff994043ed47bc1be1dfd107442
+      internalID: 1984599760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_1
+      name: bobo2 1_1
       rect:
         serializedVersion: 2
         x: 240
@@ -416,14 +419,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 907ceb33100b0e54db43281f84e74fa7
-      internalID: -849911603
+      spriteID: f32bd7b3b282b1a49a5895e925e633a7
+      internalID: 1753836303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_2
+      name: bobo2 1_2
       rect:
         serializedVersion: 2
         x: 480
@@ -438,14 +441,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8daa627bf0c18c346898ce8c56202571
-      internalID: 1213146828
+      spriteID: c27cb8935dae29f4898c8c9f3f9a10c9
+      internalID: 1633275418
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_3
+      name: bobo2 1_3
       rect:
         serializedVersion: 2
         x: 720
@@ -460,14 +463,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffdc1d30999fde9428165661f80d7734
-      internalID: -1798664593
+      spriteID: f69f6df05213a2142ac0511e77c667a1
+      internalID: -1485806965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_4
+      name: bobo2 1_4
       rect:
         serializedVersion: 2
         x: 960
@@ -482,14 +485,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a501e7eb8b4692c4b859882a9fd29580
-      internalID: -1044685076
+      spriteID: 18ce6e8ee202cbf46b1c5b625721c71c
+      internalID: 1372231368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_5
+      name: bobo2 1_5
       rect:
         serializedVersion: 2
         x: 1200
@@ -504,14 +507,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2ff7ad1039bfc9468c72a61ea4d71b7
-      internalID: 1838319465
+      spriteID: ca3eb14ac747b5440a250819cfb31dca
+      internalID: -211192036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_6
+      name: bobo2 1_6
       rect:
         serializedVersion: 2
         x: 1440
@@ -526,14 +529,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bee563d449272fb409cb78d285fecb9c
-      internalID: -1597744325
+      spriteID: d789cc6151ffba04c9c8eb83eef8a3bd
+      internalID: -1564182482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_7
+      name: bobo2 1_7
       rect:
         serializedVersion: 2
         x: 0
@@ -548,14 +551,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 053c58dfece77db4f894489628fa9687
-      internalID: -344113097
+      spriteID: b12a310706368264ca008f7ac3a5b021
+      internalID: 2015798447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_8
+      name: bobo2 1_8
       rect:
         serializedVersion: 2
         x: 240
@@ -570,14 +573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bc44a8559bbee844a57086edcb4b610
-      internalID: 2006395337
+      spriteID: 523456abc148b83478a218724e4d6201
+      internalID: 582783010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_9
+      name: bobo2 1_9
       rect:
         serializedVersion: 2
         x: 480
@@ -592,14 +595,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90093793dae07e046b1507a66ee2ddca
-      internalID: -484639856
+      spriteID: 680613dc64c8bcf46ad9267d1cd958e1
+      internalID: -1625902793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_10
+      name: bobo2 1_10
       rect:
         serializedVersion: 2
         x: 720
@@ -614,14 +617,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f716a08a2d6ecdd46afa7dc450571a01
-      internalID: 984654218
+      spriteID: 6c093de85cebd414dbfb989bb1ffab72
+      internalID: 846910417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_11
+      name: bobo2 1_11
       rect:
         serializedVersion: 2
         x: 960
@@ -636,14 +639,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 828bba2430d9609468c3ab390b0a2771
-      internalID: 1014227141
+      spriteID: d775d2e4fe319af44aee0a71479c1694
+      internalID: 273398054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_12
+      name: bobo2 1_12
       rect:
         serializedVersion: 2
         x: 1200
@@ -658,14 +661,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88b5fcde20da3b7498df9d9ebdf781ec
-      internalID: 456878900
+      spriteID: c0f935d6aa264e94e89a22727ddba560
+      internalID: 1558698151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_13
+      name: bobo2 1_13
       rect:
         serializedVersion: 2
         x: 1440
@@ -680,14 +683,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a409d44f3f7ee0a45860ba10f01ba378
-      internalID: 817818903
+      spriteID: e01dd81aae95fb94992666130f5d1048
+      internalID: -143675199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_14
+      name: bobo2 1_14
       rect:
         serializedVersion: 2
         x: 0
@@ -702,14 +705,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdb45192c7203ac4588ab167355b6daf
-      internalID: -446864183
+      spriteID: 676dfe25752dc2f4bb47b789efd92749
+      internalID: -993136600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_15
+      name: bobo2 1_15
       rect:
         serializedVersion: 2
         x: 240
@@ -724,14 +727,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 183ce6004180acf40a848218e0434479
-      internalID: 1024509359
+      spriteID: 3a71733845293d04f92a0401f4cbd83d
+      internalID: 2032165639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_16
+      name: bobo2 1_16
       rect:
         serializedVersion: 2
         x: 480
@@ -746,14 +749,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be0d7b0acfdf8ed49bbeff6ef1c32b38
-      internalID: 1187113961
+      spriteID: d48f6cf2103f9aa41bae7ee499009faa
+      internalID: -926556740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_17
+      name: bobo2 1_17
       rect:
         serializedVersion: 2
         x: 720
@@ -768,14 +771,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee5e396453e895342a5b36f96d59e54c
-      internalID: -213017609
+      spriteID: 6890985925b681d498b746d8dedba53b
+      internalID: -972897716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_18
+      name: bobo2 1_18
       rect:
         serializedVersion: 2
         x: 960
@@ -790,14 +793,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6310b8cf9c1ec594c905d9255125503d
-      internalID: -645732674
+      spriteID: 669719e1b0353ba488e50c8079ff1d59
+      internalID: 169257922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_19
+      name: bobo2 1_19
       rect:
         serializedVersion: 2
         x: 1200
@@ -812,14 +815,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c771483290e371148b9f3129ee536b94
-      internalID: 1107339787
+      spriteID: 76bd4ae73a917744484eb16da74703ed
+      internalID: 1650385910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_20
+      name: bobo2 1_20
       rect:
         serializedVersion: 2
         x: 1440
@@ -834,14 +837,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 760058ae5155e234f80572efc734706a
-      internalID: 1231412857
+      spriteID: 347359c7d71f35348aedd6cd776b73de
+      internalID: 759331397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_21
+      name: bobo2 1_21
       rect:
         serializedVersion: 2
         x: 0
@@ -856,14 +859,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0635f196fd501941a9928e82124b5ac
-      internalID: 1896251155
+      spriteID: e9a174b742bb7d44b92c5745a4bc3a86
+      internalID: 1084212839
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_22
+      name: bobo2 1_22
       rect:
         serializedVersion: 2
         x: 240
@@ -878,14 +881,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 87f5ab812ecef10448e73989c95b346b
-      internalID: 876985378
+      spriteID: 3bd576da3c8431c469c0d352d003867a
+      internalID: -1817493081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_23
+      name: bobo2 1_23
       rect:
         serializedVersion: 2
         x: 480
@@ -900,14 +903,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99388df1a08122b4f9a3ca7bfa1ef0c7
-      internalID: -482179389
+      spriteID: 1fff773184dad8c49b229f6b715c0020
+      internalID: -1725042497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_24
+      name: bobo2 1_24
       rect:
         serializedVersion: 2
         x: 720
@@ -922,14 +925,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb2b77197f6487c4ab9b01d71009328a
-      internalID: 973245175
+      spriteID: 05741ef0ad43ec446b47d3d7a8eb6eef
+      internalID: 635035886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_25
+      name: bobo2 1_25
       rect:
         serializedVersion: 2
         x: 960
@@ -944,14 +947,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e1b4c568b6680745a152a3f32f44d71
-      internalID: 8037663
+      spriteID: b1540afbfa80ff54dbc3379cad2b15f6
+      internalID: -1531018765
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_26
+      name: bobo2 1_26
       rect:
         serializedVersion: 2
         x: 1200
@@ -966,14 +969,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69f2d4cd101970b428fc34227aa5aaf0
-      internalID: 629043194
+      spriteID: c5bf9315652f9964e8635deb1eeb77b1
+      internalID: 55895021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bobo1_27
+      name: bobo2 1_27
       rect:
         serializedVersion: 2
         x: 1440
@@ -988,8 +991,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 960cfa92397d9594783317836ebb0797
-      internalID: -1653352429
+      spriteID: 004faf9e5d6d9a941b8b762f9bc34ae7
+      internalID: -1882690599
       vertices: []
       indices: 
       edges: []
@@ -998,7 +1001,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 206f6c43ad777bf40912d1fa0ed1a333
+    spriteID: 169a8934e4841e74fb0580737a44c3a8
     internalID: 0
     vertices: []
     indices: 
@@ -1008,34 +1011,34 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bobo1_0: 1269456344
-      bobo1_1: -849911603
-      bobo1_10: 984654218
-      bobo1_11: 1014227141
-      bobo1_12: 456878900
-      bobo1_13: 817818903
-      bobo1_14: -446864183
-      bobo1_15: 1024509359
-      bobo1_16: 1187113961
-      bobo1_17: -213017609
-      bobo1_18: -645732674
-      bobo1_19: 1107339787
-      bobo1_2: 1213146828
-      bobo1_20: 1231412857
-      bobo1_21: 1896251155
-      bobo1_22: 876985378
-      bobo1_23: -482179389
-      bobo1_24: 973245175
-      bobo1_25: 8037663
-      bobo1_26: 629043194
-      bobo1_27: -1653352429
-      bobo1_3: -1798664593
-      bobo1_4: -1044685076
-      bobo1_5: 1838319465
-      bobo1_6: -1597744325
-      bobo1_7: -344113097
-      bobo1_8: 2006395337
-      bobo1_9: -484639856
+      bobo2 1_0: 1984599760
+      bobo2 1_1: 1753836303
+      bobo2 1_10: 846910417
+      bobo2 1_11: 273398054
+      bobo2 1_12: 1558698151
+      bobo2 1_13: -143675199
+      bobo2 1_14: -993136600
+      bobo2 1_15: 2032165639
+      bobo2 1_16: -926556740
+      bobo2 1_17: -972897716
+      bobo2 1_18: 169257922
+      bobo2 1_19: 1650385910
+      bobo2 1_2: 1633275418
+      bobo2 1_20: 759331397
+      bobo2 1_21: 1084212839
+      bobo2 1_22: -1817493081
+      bobo2 1_23: -1725042497
+      bobo2 1_24: 635035886
+      bobo2 1_25: -1531018765
+      bobo2 1_26: 55895021
+      bobo2 1_27: -1882690599
+      bobo2 1_3: -1485806965
+      bobo2 1_4: 1372231368
+      bobo2 1_5: -211192036
+      bobo2 1_6: -1564182482
+      bobo2 1_7: 2015798447
+      bobo2 1_8: 582783010
+      bobo2 1_9: -1625902793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
