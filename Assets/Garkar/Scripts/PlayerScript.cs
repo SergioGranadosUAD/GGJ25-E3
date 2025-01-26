@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Xml.Schema;
 using Unity.VisualScripting;
@@ -89,6 +90,11 @@ public class PlayerScript : MonoBehaviour
   
   [SerializeField]
   private GameObject m_defaultProjectileGO;
+  [SerializeField]
+  private List<RuntimeAnimatorController> m_playerAnimationSets;
+  [SerializeField]
+  private List<Sprite> m_weaponTextures;
+
 
   private float m_currentRegenTime = 0.0f;
   private float m_currentResistance = 0.0f;
