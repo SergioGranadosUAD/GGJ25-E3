@@ -17,6 +17,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: b596362f2df528d4eb076d337cade7d7
+  - enabled: 1
+    path: Assets/Mau/Scenes/Level 1_Layout.unity
+    guid: 1406a456ed62c3141ab8950bb8a01d3c
+  - enabled: 1
+    path: Assets/Mau/Scenes/Level 2_Layout.unity
+    guid: 4a8d1583dc9b5cc418b75ba4d15c2f21
+  - enabled: 1
+    path: Assets/Mau/Scenes/Level 3_Layout.unity
+    guid: 57a90c8687ac886408e1b23a55e16912
+  - enabled: 1
+    path: Assets/Mau/Scenes/Level 4_Layout.unity
+    guid: 5327a69ee9f534648809ac5bb164e8ee
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 802e885aa66b68c45b2209329e5481df, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

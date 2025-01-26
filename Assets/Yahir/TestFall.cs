@@ -24,6 +24,10 @@ public class TestFall : MonoBehaviour
             {
                 GameManager.Instance.addPoints(playerScript.LastPlayerID + 1);
             }
+            else
+            {
+                GameManager.Instance.substractPoints(playerScript.PlayerInput.playerIndex + 1);
+            }
             GameManager.Instance.setPlayerPosition(gameObject);
         }
     }

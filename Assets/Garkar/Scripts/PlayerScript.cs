@@ -5,6 +5,7 @@ using System.Xml.Schema;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 //[RequireComponent(typeof(PlayerInput))]
 public class PlayerScript : MonoBehaviour
@@ -90,8 +91,13 @@ public class PlayerScript : MonoBehaviour
   [SerializeField]
   private GameObject m_defaultProjectileGO;
 
+    [SerializeField]
+    private float m_limitTimeEnemy = 5.0f;
+
     public int LastPlayerID { get { return m_lastPlayerID; } }
 
+
+    private float m_currentTime = 0.0f;
   private int m_lastPlayerID = 0;
   private float m_currentRegenTime = 0.0f;
   private float m_currentResistance = 0.0f;
@@ -163,6 +169,14 @@ public class PlayerScript : MonoBehaviour
             OnJump();
         }
         m_isShooting = m_shootAtion.IsPressed();
+
+        m_currentTime += Time.deltaTime;
+
+        if (m_currentTime > m_limitTimeEnemy)
+        {
+            m_currentTime = 0.0f;
+            m_lastPlayerID = -1;
+        }
   }
     private void OnMove(InputAction.CallbackContext context)
     {
@@ -280,7 +294,8 @@ public class PlayerScript : MonoBehaviour
   public void damagePlayer(Vector2 dir, float damageAmount, float pushForce, int index)
   {
     m_lastPlayerID = index;
-    if(!m_isTrapped && m_canBeTrapped)
+    m_currentTime = 0.0f;
+    if (!m_isTrapped && m_canBeTrapped)
     {
       m_currentResistance -= damageAmount;
       if (m_currentResistance <= 0)
